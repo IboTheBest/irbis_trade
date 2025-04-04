@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@font-face {
+  font-display: swap; 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/montserrat-v29-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/montserrat-v29-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/montserrat-v29-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap; 
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/montserrat-v29-latin-700.woff2') format('woff2');
+}
+*{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5f5f5;
+}
+.site-header {
+  background-image: url('./assets/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  position: relative; 
+  top: 0;
+}
+.options-section {
+  background-image: url("./assets/images/options-section-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position:center ; 
+  height: 100%;
+}
+.containers{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.take-section{
+  background-image: url("./assets/images/take-section-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* height: 60vh; */
+  
+}
+.another-font{
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  -webkit-text-stroke: 1px black;
+}
+.ant-btn{
+  background-color: rgb(0, 191, 255) !important;
+  width: 100%;
+}
+.untouchable{
+  user-select: none;
+  pointer-events: none;
+}
