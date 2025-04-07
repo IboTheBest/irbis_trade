@@ -1,10 +1,10 @@
 import React from 'react'
-import img1 from "../assets/images/img1.svg"
-import img2 from "../assets/images/img2.svg"
-import img3 from "../assets/images/img3.svg"
-import img4 from "../assets/images/img4.svg"
-import img5 from "../assets/images/img5.svg"
-import ReusebleCard from '../components/ReusebleCard'
+import img1 from "../../assets/images/img1.svg"
+import img2 from "../../assets/images/img2.svg"
+import img3 from "../../assets/images/img3.svg"
+import img4 from "../../assets/images/img4.svg"
+import img5 from "../../assets/images/img5.svg"
+import ReusebleCard from '../../components/ReusebleCard'
 const Section5 = () => {
     const section5data = [
         {
@@ -40,7 +40,7 @@ const Section5 = () => {
                     <span className="text-[#00bfff]">ВОПРОСЫ</span> ПО ТАМОЖЕННОМУ ОФОРМЛЕНИЮ
                 </h2>
                 <ul className='flex flex-wrap items-center justify-center gap-[20px]'>
-                    {section5data.map(item=><li className=''><ReusebleCard isBtn={true} imgClass={"w-[75px] mt-[40px] h-[74px]"} description={item.title} image={item.image} /></li>)}
+                    {section5data.map(item=><li key={item.id} className=''><ReusebleCard isBtn={true} imgClass={"w-[75px] mt-[40px] h-[74px]"} description={item.title} image={item.image} /></li>)}
                 </ul>
                 <img src={img1} alt="" />
             </div>
