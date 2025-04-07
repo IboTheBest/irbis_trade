@@ -1,41 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import menu from '../assets/images/manu.svg';
 import { PATH } from '../hooks/PATH';
+import MenuDrawer from './MenuDrawer';
+export const navbarList = [
+
+    {
+        id: 1,
+        title: "О нас",
+        path: PATH.about
+    },
+    {
+        id: 2,
+        title: "Наши услуги",
+        path: PATH.services
+    },
+    {
+        id: 3,
+        title: "Партнерство",
+        path: PATH.partnership
+    },
+    {
+        id: 4,
+        title: "Наши продукции",
+        path: PATH.products
+    },
+    {
+        id: 5,
+        title: "Новости",
+        path: PATH.news
+    },
+    {
+        id: 6,
+        title: "контакты",
+        path: PATH.contact
+    },
+]
 const Navbar = () => {
+    const [open, setOpen] = useState(false)
     const location = useLocation().pathname
-    const navbarList = [
-        {
-            id:1,
-            title:"О нас",
-            path:PATH.about
-        },
-        {
-            id:2,
-            title:"Наши услуги",
-            path:PATH.services
-        },
-        {
-            id:3,
-            title:"Партнерство",
-            path:PATH.partnership
-        },
-        {
-            id:4,
-            title:"Наши продукции",
-            path:PATH.products
-        },
-        {
-            id:5,
-            title:"Новости",
-            path:PATH.news
-        },
-        {
-            id:6,
-            title:"контакты",
-            path:PATH.contact
-        },
-    ]
     return (
         <nav className={`top-0 bg-[#00000070] ${location == "/" && "fixed"} w-full z-50 mx-auto left-0 right-0 flex items-center justify-between py-[10px]`}>
             <Link className="ml-[30px]" to={"/"}>
@@ -48,12 +51,10 @@ const Navbar = () => {
                     </li>
                 ))}
             </ul>
-            <button className="mr-[30px] md:hidden">
+            <button onClick={()=> setOpen(!open)} className="mr-[30px] md:hidden">
                 <img className="untouchable" src={menu} alt="open navbar menu" width="40" height="40" />
             </button>
-            <div id="wrapper" className="modal-wrapper sm:fixed inset-0 hidden bg-[#00000070]">
-                <div className="modal bg-[#FFFFFFF0] w-[250px] h-[100vh] flex justify-center flex-col top-[-100%] right-[-100%] transition-all duration-700 relative"></div>
-            </div>
+            <MenuDrawer open={open} setOpen={setOpen}/>
         </nav>
     )
 }
