@@ -1,42 +1,43 @@
 import React from 'react'
-import {About_us, Commision, Contact, Home, News, Partnership, Products} from "../pages"
+import {About_us, Contact, Home, News, Partnership, Products, ServicesPage} from "../pages"
 import {PATH} from "../hooks/PATH"
 import { Route, Routes } from 'react-router-dom'
 const dashboardRoutesList = [
   {
     id:1,
     element: <Home/>,
-    path: PATH.home
+    path: PATH.home,
+    
   },
   {
     id:2,
     element: <About_us/>,
-    path: PATH.about
+    path: PATH.about,
   },
   {
     id:3,
-    element: <Commision/>,
-    path: PATH.services
+    element: <ServicesPage/>,
+    path: PATH.services,
   },
   {
     id:4,
     element: <Partnership/>,
-    path: PATH.partnership
+    path: PATH.partnership,
   },
   {
     id:5,
     element: <Products/>,
-    path: PATH.products
+    path: PATH.products,
   },
   {
     id:6,
     element: <News/>,
-    path: PATH.news
+    path: PATH.news,
   },
   {
     id:1,
     element: <Contact/>,
-    path: PATH.contact
+    path: PATH.contact,
   }
 ]
 
@@ -44,7 +45,7 @@ const DashboardRoutes = () => {
   return (
       <Routes>
         {dashboardRoutesList.map(item=>(
-          <Route path={item.path} element={item.element}/>
+          <Route path={item?.path} element={item.element}/>
         ))}
       </Routes>
   )

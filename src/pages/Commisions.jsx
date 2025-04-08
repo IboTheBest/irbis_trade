@@ -54,6 +54,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Services */}
+        
         <div className="grid gap-8 md:grid-cols-2 mb-16">
           {/* Consultation */}
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">

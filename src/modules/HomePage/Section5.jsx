@@ -36,13 +36,12 @@ const Section5 = () => {
     return (
         <section className="py-[90px]">
             <div className="containers">
-                <h2 className="uppercase font-bold text-center text-[34px]">
+                <h2 className="uppercase font-bold mb-[20px] text-center text-[34px]">
                     <span className="text-[#00bfff]">ВОПРОСЫ</span> ПО ТАМОЖЕННОМУ ОФОРМЛЕНИЮ
                 </h2>
                 <ul className='flex flex-wrap items-center justify-center gap-[20px]'>
                     {section5data.map(item=><li key={item.id} className=''><ReusebleCard isBtn={true} imgClass={"w-[75px] mt-[40px] h-[74px]"} description={item.title} image={item.image} /></li>)}
                 </ul>
-                <img src={img1} alt="" />
             </div>
         </section>
     )
