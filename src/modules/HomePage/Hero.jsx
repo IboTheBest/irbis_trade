@@ -17,16 +17,16 @@ const Hero = () => {
                     </p>
                     <ul className="flex items-center justify-center flex-wrap mt-[40px] gap-[30px]">
                         <li className="w-[269px]">
-                            <h3 className="text-[#00bfff] text-[42px] font-bold">12 лет</h3>
+                            <h3 className="text-[#00bfff] text-[42px] font-bold">27 лет</h3>
                             <p className="font-bold text-[16px]">безупречной репутации на рынке</p>
                         </li>
                         <li className="w-[269px]">
-                            <h3 className="text-[#00bfff] text-[42px] font-bold">от 25000₸</h3>
-                            <p className="font-bold text-[16px]">печать деклараций</p>
+                            <h3 className="text-[#00bfff] text-[42px] font-bold">от 3 БРВ</h3>
+                            <p className="font-bold text-[16px]">Консултатсия ВЭД</p>
                         </li>
                         <li className="w-[269px]">
-                            <h3 className="text-[#00bfff] text-[42px] font-bold">30 000₸</h3>
-                            <p className="font-bold text-[16px]">оформление ТД</p>
+                            <h3 className="text-[#00bfff] text-[42px] font-bold">15 БРВ</h3>
+                            <p className="font-bold text-[16px]">оформление ГТД</p>
                         </li>
                     </ul>
                 </div>
