@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 const Header = () => {
     return (
-        <header className="site-header pb-[100px] z-[2]">
+        <header className="site-header h-[100vh] pb-[100px] z-[2]">
             <div className="containers">
                 <div className="pt-[112px]">
                     <div className="text-center mx-auto max-w-[900px] mt-[80px]">

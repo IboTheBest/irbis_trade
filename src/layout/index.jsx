@@ -6,9 +6,11 @@ import Navbar from '../components/Navbar'
 const DashboardLayout = () => {
   return (
     <div>
-        <Navbar/>
-        <DashboardRoutes/>
-        <Footer/>
+      <Navbar />
+      <main>
+        <DashboardRoutes />
+      </main>
+      <Footer />
     </div>
   )
 }

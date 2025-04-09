@@ -95,7 +95,7 @@ export default function AboutUs() {
               <img
                 src={logo.image || `/placeholder.svg?height=80&width=160&text=Логотип+${index + 1}`}
                 alt={logo.name || `Клиент ${index + 1}`}
-                className="h-16 object-contain"
+                className="h-16 object-contain untouchable"
               />
             </div>
           ))}

@@ -64,7 +64,7 @@ export default function Footer() {
             <h3 className="text-lg font-bold mb-4 text-blue-300">Наше расположение</h3>
             <div className="h-[150px] rounded-lg overflow-hidden relative">
               <iframe 
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A123456789&amp;source=constructor" 
+                src="https://yandex.uz/map-widget/v1/?ll=69.139946%2C41.220672&utm_source=share&z=16" 
                 width="100%" 
                 height="100%" 
                 frameBorder="0"
