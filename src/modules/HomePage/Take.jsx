@@ -1,6 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
+import postContact from '../../service/postContact'
 
 const Take = () => {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [contact, setContact] = useState("")
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        const body = {
+            name, contact, email
+        }
+        postContact("/", body)
+        console.log(body);
+        
+        setName("")
+        setEmail("")
+        setContact("")
+
+    }
     return (
         <section className="take-section bg-fixed py-[90px]">
             <div className="containers">
@@ -10,10 +28,12 @@ const Take = () => {
                 <p className="text-[21px] text-white leading-[30px] font-normal text-center my-[30px]">
                     Предложение с максимальной выгодой <span className="font-bold">для долгосрочных партнеров и клиентов</span>
                 </p>
-                <form className="flex items-center justify-center gap-5 flex-wrap pt-[50px]">
+                <form onSubmit={handleSubmit} className="flex items-center justify-center gap-5 flex-wrap pt-[50px]">
                     <label className="flex flex-col">
                         <span className="text-white font-extralight text-[12px]">Какие товары нужно растаможить?</span>
                         <input
+                            value={name}
+                            onChange={(e)=> setName(e.target.value)}
                             required
                             className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
                             type="text"
@@ -22,6 +42,8 @@ const Take = () => {
                     <label className="flex flex-col">
                         <span className="text-white font-extralight text-[12px]">Контактный телефон</span>
                         <input
+                            value={contact}
+                            onChange={(e)=>setContact(e.target.value)}
                             required
                             className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
                             type="text"
@@ -30,9 +52,11 @@ const Take = () => {
                     <label className="flex flex-col">
                         <span className="text-white font-extralight text-[12px]">E-Mail</span>
                         <input
+                            value={email}
+                            onChange={(e)=> setEmail(e.target.value)}
                             required
                             className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
-                            type="text"
+                            type="email"
                         />
                     </label>
                     <button

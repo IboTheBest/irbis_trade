@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
+import postContact from '../../service/postContact'
 
 const Section6 = () => {
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [contact, setContact] = useState("")
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        const body = {
+            name, contact, email
+        }
+        postContact("/", body)
+
+        setName("")
+        setEmail("")
+        setContact("")
+
+    }
     return (
         <section>
             <div className="containers">
@@ -17,7 +34,7 @@ const Section6 = () => {
                         height={600}
                     />
 
-                    <form className="flex items-center w-[380px] flex-col justify-center gap-5 flex-wrap">
+                    <form onSubmit={handleSubmit} className="flex items-center w-[380px] flex-col justify-center gap-5 flex-wrap">
                         <h3 className="font-bold text-[21px] mb-[35px] text-center">
                             Мы дадим вам развернутый ответ в течение рабочего дня
                         </h3>
@@ -27,6 +44,8 @@ const Section6 = () => {
                                 Какие товары нужно растаможить?
                             </span>
                             <input
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
                                 required
                                 className="bg-inherit text-black outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 w-[256px] md:w-[350px] p-2"
                                 type="text"
@@ -36,6 +55,8 @@ const Section6 = () => {
                         <label className="flex flex-col">
                             <span className="text-black font-light text-[12px]">Контактный телефон</span>
                             <input
+                                value={contact}
+                                onChange={(e) => setContact(e.target.value)}
                                 required
                                 className="bg-inherit text-black outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-300 w-[256px] md:w-[350px] p-2"
                                 type="text"
@@ -45,6 +66,8 @@ const Section6 = () => {
                         <label className="flex flex-col">
                             <span className="text-black font-light text-[12px]">E-Mail</span>
                             <input
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
                                 required
                                 className="bg-inherit text-black outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 w-[256px] md:w-[350px] p-2"
                                 type="email"
