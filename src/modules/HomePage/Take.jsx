@@ -19,7 +19,9 @@ const Take = () => {
     function handleSubmit(e) {
         e.preventDefault()
         const body = {
-            message, contact, setUsername
+            client_name: username,
+            clinet_phone_number: contact,
+            message
         }
         postContact("/feedBackCall", body, toast)
         console.log(body);
@@ -31,7 +33,7 @@ const Take = () => {
     }
     return (
         <section className="take-section bg-fixed py-[90px]">
-            <Toaster position="top-center" reverseOrder={false}/>
+            <Toaster position="top-center" reverseOrder={false} />
             <div className="containers">
                 <h2 data-aos="fade-up" className="text-[35px] text-white leading-[50px] font-bold text-center">
                     <span className="text-[#00bfff]">ПОЛУЧИТЕ СПЕЦТАРИФЫ</span> ДЛЯ РЕГУЛЯРНЫХ ПОСТАВОК
