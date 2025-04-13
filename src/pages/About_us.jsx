@@ -1,24 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {User, FileText, Gift, List, Smartphone, PhoneCall } from 'lucide-react'
 import novey from "../assets/images/novey.png"
 import protherm from "../assets/images/protherm.png"
 import tenzi from "../assets/images/tenzi.png"
 import vileda from "../assets/images/vileda.png"
 import yandexgo from "../assets/images/yandexgo.png"
-
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function AboutUs() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true })
+  }, [])
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
       {/* Header Section */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-16" data-aos="fade-down">
         <h1 className="text-4xl font-bold tracking-tight mb-4">О нас</h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">ЧП "IRBIS US" - эксперты в области таможенной очистки грузов с 2014 года</p>
       </div>
 
       {/* Company Story */}
-      <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+      <div className="grid md:grid-cols-2 gap-12 items-center mb-20" data-aos="fade-up">
         <div>
           <h2 className="text-3xl font-bold mb-6">О компании</h2>
           <p className="text-gray-600 mb-4">ЧП "IRBIS US" создан в 2014 году.</p>
@@ -26,18 +30,20 @@ export default function AboutUs() {
           <p className="text-gray-600">Все решения предоставляются как в индивидуальном формате, так и по принципу «под ключ», исходя из ваших потребностей.</p>
         </div>
         <div className="rounded-lg overflow-hidden shadow-lg">
-          <iframe className="w-full" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3000.9422951872534!2d69.13865207605132!3d41.22302797132128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEzJzIyLjkiTiA2OcKwMDgnMjguNCJF!5e0!3m2!1sru!2s!4v1735909602268!5m2!1sru!2s" width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe className="w-full" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3000.9422951872534!2d69.13865207605132!3d41.22302797132128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEzIyLjkiTiA2OcKwMDgnMjguNCJF!5e0!3m2!1sru!2s!4v1735909602268!5m2!1sru!2s" width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
 
       {/*  Advantages Section */}
-      <div className="mb-20 py-10 px-4 bg-gray-100 rounded-2xl">
+      <div className="mb-20 py-10 px-4 bg-gray-100 rounded-2xl" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center mb-12">Наши преимущества</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {advantages.map((advantage, index) => (
             <div
               key={index}
               className="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               {/* Card with gradient background */}
               <div className="bg-gradient-to-br from-[#0288d1] to-[#01579b] p-6 h-full flex flex-col items-center">
@@ -59,13 +65,15 @@ export default function AboutUs() {
         </div>
       </div>
   {/* Team Section */}
-  <div className="mb-20">
+  <div className="mb-20" data-aos="fade-down">
         <h2 className="text-3xl font-bold text-center mb-12">Наша команда</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <div className="aspect-square relative overflow-hidden bg-gray-100">
                 <img
@@ -84,13 +92,15 @@ export default function AboutUs() {
       </div>
 
       {/* Client Logos Section */}
-      <div className="mb-20">
+      <div className="mb-20" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center mb-12">Наши клиенты</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
           {clientLogos.map((logo, index) => (
             <div
               key={index}
               className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <img
                 src={logo.image || `/placeholder.svg?height=80&width=160&text=Логотип+${index + 1}`}
@@ -170,4 +180,3 @@ const clientLogos = [
   { image:vileda , name: "Клиент 4" },
   { image:yandexgo , name: "Клиент 5" },
 ]
-

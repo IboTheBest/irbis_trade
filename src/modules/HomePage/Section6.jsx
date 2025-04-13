@@ -1,27 +1,40 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import postContact from '../../service/postContact'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Section6 = () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+    const [username, setUsername] = useState("")
     const [contact, setContact] = useState("")
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        })
+    }, [])
 
     function handleSubmit(e) {
         e.preventDefault()
         const body = {
-            name, contact, email
+            client_name: username,
+            clinet_phone_number: contact,
+            message
         }
-        postContact("/", body)
+        console.log(body);
+        
+        postContact("/feedBackCall", body)
 
-        setName("")
-        setEmail("")
+        setMessage("")
+        setUsername("")
         setContact("")
 
     }
     return (
         <section>
             <div className="containers">
-                <h2 className="text-[24px] md:text-[34px] text-center font-bold">
+                <h2 className="text-[24px] md:text-[34px] text-center font-bold" data-aos="fade-up">
                     <span className="text-[#00bfff]">ОСТАЛИСЬ ВОПРОСЫ?</span> ЗАДАЙТЕ ИХ НАШИМ СПЕЦИАЛИСТАМ
                 </h2>
 
@@ -32,20 +45,19 @@ const Section6 = () => {
                         alt="phone img"
                         width={530}
                         height={600}
+                        data-aos="fade-up"
                     />
 
-                    <form onSubmit={handleSubmit} className="flex items-center w-[380px] flex-col justify-center gap-5 flex-wrap">
+                    <form onSubmit={handleSubmit} className="flex items-center w-[380px] flex-col justify-center gap-5 flex-wrap" data-aos="fade-up">
                         <h3 className="font-bold text-[21px] mb-[35px] text-center">
                             Мы дадим вам развернутый ответ в течение рабочего дня
                         </h3>
 
                         <label className="flex flex-col">
-                            <span className="text-black font-light text-[12px]">
-                                Какие товары нужно растаможить?
-                            </span>
+                            <span className="text-black font-light text-[12px]">Имя пользователя</span>
                             <input
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
                                 required
                                 className="bg-inherit text-black outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 w-[256px] md:w-[350px] p-2"
                                 type="text"
@@ -64,19 +76,22 @@ const Section6 = () => {
                         </label>
 
                         <label className="flex flex-col">
-                            <span className="text-black font-light text-[12px]">E-Mail</span>
+                            <span className="text-black font-light text-[12px]">
+                                Какие товары нужно растаможить?
+                            </span>
                             <input
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
                                 required
                                 className="bg-inherit text-black outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 w-[256px] md:w-[350px] p-2"
-                                type="email"
+                                type="text"
                             />
                         </label>
 
                         <button
                             type="submit"
                             className="w-[256px] p-[14px] bg-[#00bfff] rounded-md skew-x-[-6deg] hover:skew-x-[6deg] transition-all duration-500 text-white"
+                            data-aos="fade-up"
                         >
                             Получить тарифы
                         </button>

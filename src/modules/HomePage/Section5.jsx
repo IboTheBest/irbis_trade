@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 import img1 from "../../assets/images/img1.svg"
 import img2 from "../../assets/images/img2.svg"
 import img3 from "../../assets/images/img3.svg"
 import img4 from "../../assets/images/img4.svg"
 import img5 from "../../assets/images/img5.svg"
 import ReusebleCard from '../../components/ReusebleCard'
+
 const Section5 = () => {
     const section5data = [
         {
@@ -33,14 +37,31 @@ const Section5 = () => {
             title:"ЖД-перевозки"
         },
     ]
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+        })
+    }, [])
+
     return (
-        <section className="py-[90px]">
+        <section className="py-[90px]" data-aos="fade-up">
             <div className="containers">
-                <h2 className="uppercase font-bold mb-[20px] text-center text-[34px]">
+                {/* Title Section with AOS */}
+                <h2 className="uppercase font-bold mb-[20px] text-center text-[34px]" data-aos="fade-up">
                     <span className="text-[#00bfff]">ВОПРОСЫ</span> ПО ТАМОЖЕННОМУ ОФОРМЛЕНИЮ
                 </h2>
                 <ul className='flex flex-wrap items-center justify-center gap-[20px]'>
-                    {section5data.map(item=><li key={item.id} className=''><ReusebleCard isBtn={true} imgClass={"w-[75px] mt-[40px] h-[74px]"} description={item.title} image={item.image} /></li>)}
+                    {section5data.map(item => (
+                        <li key={item.id} data-aos="fade-up">
+                            <ReusebleCard
+                                isBtn={true}
+                                imgClass={"w-[75px] mt-[40px] h-[74px]"}
+                                description={item.title}
+                                image={item.image}
+                            />
+                        </li>
+                    ))}
                 </ul>
             </div>
         </section>

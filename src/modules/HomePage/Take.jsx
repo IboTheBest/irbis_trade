@@ -1,62 +1,73 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import postContact from '../../service/postContact'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Take = () => {
-    const [name, setName] = useState("")
-    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+    const [setUsername, setUserName] = useState("")
     const [contact, setContact] = useState("")
+
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        })
+    }, [])
 
     function handleSubmit(e) {
         e.preventDefault()
         const body = {
-            name, contact, email
+            message, contact, setUsername
         }
-        postContact("/", body)
+        postContact("/feedBackCall", body)
         console.log(body);
-        
-        setName("")
-        setEmail("")
+
+        setMessage("")
+        setUserName("")
         setContact("")
 
     }
     return (
         <section className="take-section bg-fixed py-[90px]">
             <div className="containers">
-                <h2 className="text-[35px] text-white leading-[50px] font-bold text-center">
+                <h2 data-aos="fade-up" className="text-[35px] text-white leading-[50px] font-bold text-center">
                     <span className="text-[#00bfff]">ПОЛУЧИТЕ СПЕЦТАРИФЫ</span> ДЛЯ РЕГУЛЯРНЫХ ПОСТАВОК
                 </h2>
-                <p className="text-[21px] text-white leading-[30px] font-normal text-center my-[30px]">
+                <p className="text-[21px] text-white leading-[30px] font-normal text-center my-[30px]" data-aos="fade-up">
                     Предложение с максимальной выгодой <span className="font-bold">для долгосрочных партнеров и клиентов</span>
                 </p>
-                <form onSubmit={handleSubmit} className="flex items-center justify-center gap-5 flex-wrap pt-[50px]">
+                <form onSubmit={handleSubmit} className="flex items-center justify-center gap-5 flex-wrap pt-[50px]" data-aos="fade-up">
                     <label className="flex flex-col">
-                        <span className="text-white font-extralight text-[12px]">Какие товары нужно растаможить?</span>
+                        <span className="text-white font-extralight text-[12px]">Имя пользователя</span>
                         <input
-                            value={name}
-                            onChange={(e)=> setName(e.target.value)}
+                            value={setUsername}
+                            onChange={(e) => setUserName(e.target.value)}
                             required
                             className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
                             type="text"
                         />
                     </label>
+
                     <label className="flex flex-col">
                         <span className="text-white font-extralight text-[12px]">Контактный телефон</span>
                         <input
                             value={contact}
-                            onChange={(e)=>setContact(e.target.value)}
+                            onChange={(e) => setContact(e.target.value)}
                             required
                             className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
                             type="text"
                         />
                     </label>
+
                     <label className="flex flex-col">
-                        <span className="text-white font-extralight text-[12px]">E-Mail</span>
+                        <span className="text-white font-extralight text-[12px]">Какие товары нужно растаможить?</span>
                         <input
-                            value={email}
-                            onChange={(e)=> setEmail(e.target.value)}
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
                             required
                             className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
-                            type="email"
+                            type="text"
                         />
                     </label>
                     <button
@@ -66,7 +77,7 @@ const Take = () => {
                         Получить тарифы
                     </button>
                 </form>
-                <p className="mt-[100px] text-white text-[15px] leading-[24px] text-center">
+                <p className="mt-[100px] text-white text-[15px] leading-[24px] text-center" data-aos="fade-up">
                     Нажимая на кнопку Вы соглашаетесь с политикой конфиденциальности и даете согласие на сбор и обработку Ваших персональных данных.
                 </p>
             </div>
