@@ -10,7 +10,7 @@ import 'aos/dist/aos.css'
 
 export default function AboutUs() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true })
+    AOS.init({ duration: 1000, once: false })
   }, [])
 
   return (

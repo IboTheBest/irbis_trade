@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 export default function Options() {
     AOS.init({
       duration: 1000,  // You can change this value
-      once: true,      // Animation happens only once
+      once: false,      // Animation happens only once
     });
   return (
     <div className="w-full bg-gradient-to-b from-gray-50 to-white py-20">
@@ -26,7 +26,7 @@ export default function Options() {
           </div>
           <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div data-aos="fade-up"
-              data-aos-duration="2000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              data-aos-duration="1000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
                 <Scale className="w-7 h-7 text-[#00BFFF]" />
               </div>
@@ -37,7 +37,7 @@ export default function Options() {
               </p>
             </div>
             <div data-aos="fade-up"
-              data-aos-duration="2000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              data-aos-duration="1000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
                 <Clock className="w-7 h-7 text-[#00BFFF]" />
               </div>
@@ -48,7 +48,7 @@ export default function Options() {
               </p>
             </div>
             <div data-aos="fade-up"
-              data-aos-duration="2000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              data-aos-duration="1000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
               <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
                 <BarChart3 className="w-7 h-7 text-[#00BFFF]" />
               </div>
@@ -66,7 +66,7 @@ export default function Options() {
         <div className="grid gap-8 md:grid-cols-2 mb-16">
           {/* Consultation */}
           <div data-aos="fade-up"
-              data-aos-duration="2000" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              data-aos-duration="1000" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mr-4 border border-blue-100">
                 <FileText className="w-6 h-6 text-[#00BFFF]" />
@@ -99,7 +99,7 @@ export default function Options() {
 
           {/* Contract Support */}
           <div data-aos="fade-up"
-              data-aos-duration="2000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              data-aos-duration="1000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mr-4 border border-blue-100">
                 <Globe className="w-6 h-6 text-[#00BFFF]" />
@@ -135,7 +135,7 @@ export default function Options() {
 
           {/* Customs Clearance */}
           <div data-aos="fade-up"
-              data-aos-duration="2000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              data-aos-duration="1000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mr-4 border border-blue-100">
                 <FileText className="w-6 h-6 text-[#00BFFF]" />
@@ -179,7 +179,7 @@ export default function Options() {
 
           {/* Logistics */}
           <div data-aos="fade-up"
-              data-aos-duration="2000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              data-aos-duration="1000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mr-4 border border-blue-100">
                 <Truck className="w-6 h-6 text-[#00BFFF]" />

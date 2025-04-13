@@ -9,6 +9,8 @@ import {
   InstagramOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons"
+import postContact from '../service/postContact'
+import toast, { Toaster } from 'react-hot-toast'
 
 const { Title } = Typography
 const { TextArea } = Input
@@ -18,12 +20,14 @@ const Contact = () => {
     AOS.init({ duration: 1000 })
   }, [])
 
-  const onFinish = (values) => {
-    console.log("Форма отправлена:", values)
+  const onFinish = (body) => {
+      (postContact("/feedBackCall", body, toast));
+
   }
 
   return (
     <div className="max-w-6xl mx-auto p-4 md:p-8" data-aos="fade-up">
+      <Toaster position="top-center" reverseOrder={false}/>
       <Title level={2} className="mb-6" data-aos="fade-down">
         Свяжитесь с нами
       </Title>
@@ -88,16 +92,16 @@ const Contact = () => {
           <Title level={4}>Отправьте нам сообщение</Title>
 
           <Form layout="vertical" onFinish={onFinish} className="mt-4">
-            <Form.Item name="name" label="Имя" rules={[{ required: true, message: "Пожалуйста, введите ваше имя" }]}>
+            <Form.Item name="client_name" label="Имя" rules={[{ required: true, message: "Пожалуйста, введите ваше имя" }]}>
               <Input placeholder="Ваше имя" />
             </Form.Item>
 
             <Form.Item
-              name="email"
-              label="Электронная почта"
+              name="clinet_phone_number"
+              label="Номер телефона"
               rules={[
-                { required: true, message: "Пожалуйста, введите вашу почту" },
-                { type: "email", message: "Пожалуйста, введите корректную почту" },
+                { required: true, message: "Пожалуйста, введите " },
+                { type: "text", message: "Пожалуйста, это обязательное место" },
               ]}
             >
               <Input placeholder="Ваша почта" />

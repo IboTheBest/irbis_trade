@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import postContact from '../../service/postContact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import toast, { Toaster } from 'react-hot-toast'
 
 const Section6 = () => {
     const [message, setMessage] = useState("")
@@ -11,7 +12,7 @@ const Section6 = () => {
     useEffect(() => {
         AOS.init({
             duration: 1000,
-            once: true,
+            once: false,
         })
     }, [])
 
@@ -23,8 +24,8 @@ const Section6 = () => {
             message
         }
         console.log(body);
-        
-        postContact("/feedBackCall", body)
+
+        postContact("/feedBackCall", body, toast)
 
         setMessage("")
         setUsername("")
@@ -33,6 +34,7 @@ const Section6 = () => {
     }
     return (
         <section>
+            <Toaster position="top-center" reverseOrder={false} />
             <div className="containers">
                 <h2 className="text-[24px] md:text-[34px] text-center font-bold" data-aos="fade-up">
                     <span className="text-[#00bfff]">ОСТАЛИСЬ ВОПРОСЫ?</span> ЗАДАЙТЕ ИХ НАШИМ СПЕЦИАЛИСТАМ

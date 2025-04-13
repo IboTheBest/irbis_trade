@@ -1,15 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import { Newspaper, Calendar, ExternalLink } from 'lucide-react'
 
 export default function News() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    })
+  }, [])
+
   return (
     <div className="w-full bg-gradient-to-b from-gray-50 to-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-20 text-gray-800">Новости</h1>
+        <h1 className="text-4xl font-bold text-center mb-20 text-gray-800" data-aos="fade-up">
+          Новости
+        </h1>
         
         <div className="grid gap-8">
           {/* News Item 1 */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up">
             <div className="flex items-center mb-4 text-gray-500">
               <Calendar className="w-5 h-5 mr-2" />
               <span>29.11.2024</span>
@@ -35,7 +46,7 @@ export default function News() {
           </div>
           
           {/* News Item 2 */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up">
             <div className="flex items-center mb-4 text-gray-500">
               <Calendar className="w-5 h-5 mr-2" />
               <span>04.11.2024</span>
@@ -61,7 +72,7 @@ export default function News() {
           </div>
           
           {/* News Item 3 */}
-          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+          <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow" data-aos="fade-up">
             <div className="flex items-center mb-4 text-gray-500">
               <Calendar className="w-5 h-5 mr-2" />
               <span>16.09.2024</span>
@@ -87,7 +98,7 @@ export default function News() {
           </div>
         </div>
         
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center" data-aos="fade-up">
           <a 
             href="https://kun.uz" 
             target="_blank" 

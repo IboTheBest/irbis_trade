@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import postContact from '../../service/postContact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import toast, { Toaster } from 'react-hot-toast'
 
 const Take = () => {
     const [message, setMessage] = useState("")
@@ -11,7 +12,7 @@ const Take = () => {
     useEffect(() => {
         AOS.init({
             duration: 1000,
-            once: true,
+            once: false,
         })
     }, [])
 
@@ -20,7 +21,7 @@ const Take = () => {
         const body = {
             message, contact, setUsername
         }
-        postContact("/feedBackCall", body)
+        postContact("/feedBackCall", body, toast)
         console.log(body);
 
         setMessage("")
@@ -30,6 +31,7 @@ const Take = () => {
     }
     return (
         <section className="take-section bg-fixed py-[90px]">
+            <Toaster position="top-center" reverseOrder={false}/>
             <div className="containers">
                 <h2 data-aos="fade-up" className="text-[35px] text-white leading-[50px] font-bold text-center">
                     <span className="text-[#00bfff]">ПОЛУЧИТЕ СПЕЦТАРИФЫ</span> ДЛЯ РЕГУЛЯРНЫХ ПОСТАВОК
@@ -85,4 +87,4 @@ const Take = () => {
     )
 }
 
-export default Take
+export default Take 
