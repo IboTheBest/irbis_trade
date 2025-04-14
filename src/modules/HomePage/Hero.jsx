@@ -25,7 +25,7 @@ const Hero = () => {
                             <p className="font-bold text-[16px]">Консултатсия ВЭД</p>
                         </li>
                         <li className="w-[269px]">
-                            <h3 className="text-[#00bfff] text-[42px] font-bold">15 БРВ</h3>
+                            <h3 className="text-[#00bfff] text-[42px] font-bold">до 15 БРВ</h3>
                             <p className="font-bold text-[16px]">оформление ГТД</p>
                         </li>
                     </ul>

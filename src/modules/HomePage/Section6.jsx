@@ -10,12 +10,16 @@ const Section6 = () => {
     const [username, setUsername] = useState("")
     const [contact, setContact] = useState("")
 
-    useEffect(() => {
-        AOS.init({
-            duration: 1000,
-            once: false,
-        })
-    }, [])
+    function handleFocus(){
+        setContact("+998")
+    }
+
+        useEffect(() => {
+            AOS.init({
+                duration: 1000,
+                once: false,
+            })
+        }, [])
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -70,6 +74,7 @@ const Section6 = () => {
                         <label className="flex flex-col">
                             <span className="text-black font-light text-[12px]">Контактный телефон</span>
                             <input
+                                onFocus={handleFocus}
                                 value={contact}
                                 onChange={(e) => setContact(e.target.value)}
                                 required
@@ -81,7 +86,7 @@ const Section6 = () => {
 
                         <label className="flex flex-col">
                             <span className="text-black font-light text-[12px]">
-                                Какие товары нужно растаможить?
+                                Наш какой продукт/услуга вас интересует
                             </span>
                             <input
                                 value={message}

@@ -9,6 +9,10 @@ const Take = () => {
     const [setUsername, setUserName] = useState("")
     const [contact, setContact] = useState("")
 
+    function handleFocus() {
+        setContact("+998")
+    }
+
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -56,6 +60,7 @@ const Take = () => {
                     <label className="flex flex-col">
                         <span className="text-white font-extralight text-[12px]">Контактный телефон</span>
                         <input
+                            onFocus={handleFocus}
                             value={contact}
                             onChange={(e) => setContact(e.target.value)}
                             required
@@ -66,7 +71,7 @@ const Take = () => {
                     </label>
 
                     <label className="flex flex-col">
-                        <span className="text-white font-extralight text-[12px]">Какие товары нужно растаможить?</span>
+                        <span className="text-white font-extralight text-[12px]">Наш какой продукт/услуга вас интересует</span>
                         <input
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}

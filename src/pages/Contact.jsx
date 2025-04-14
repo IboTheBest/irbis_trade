@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { Card, Form, Input, Button, Typography } from "antd"
@@ -20,11 +20,14 @@ const Contact = () => {
     AOS.init({ duration: 1000 })
   }, [])
 
+  const [contact, setContact] = useState("")
+
   const onFinish = (body) => {
       (postContact("/feedBackCall", body, toast));
-      console.log(body);
-      
+  }
 
+  function handleFocus(){
+    setContact("+998")
   }
 
   return (
@@ -106,7 +109,7 @@ const Contact = () => {
                 { type: "text", message: "Пожалуйста, это обязательное место" },
               ]}
             >
-              <Input placeholder="+998(__) ___-__-__" />
+              <Input onFocus={handleFocus} defaultValue={contact} placeholder="+998(__) ___-__-__" />
             </Form.Item>
 
             <Form.Item

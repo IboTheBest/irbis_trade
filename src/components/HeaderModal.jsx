@@ -66,7 +66,7 @@ const HeaderModal = ({ open, setOpen }) => {
                     </label>
 
                     <label className="flex flex-col text-sm text-gray-700">
-                        Какие товары нужно растаможить?
+                        Наш какой продукт/услуга вас интересует?
                         <input
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}

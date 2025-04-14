@@ -32,7 +32,7 @@ export const navbarList = [
     },
     {
         id: 6,
-        title: "контакты",
+        title: "Контакт",
         path: PATH.contact
     },
 ]
@@ -40,7 +40,7 @@ const Navbar = () => {
     const [open, setOpen] = useState(false)
     const location = useLocation().pathname
     return (
-        <nav className={`top-0 bg-[#00000070] ${location == "/" && "fixed"} w-full z-50 mx-auto left-0 right-0 flex items-center justify-between py-[10px]`}>
+        <nav className={`top-0 bg-[#00000070] ${location == "/" && "absolute"} w-full z-50 mx-auto left-0 right-0 flex items-center justify-between py-[10px]`}>
             <Link className="ml-[30px]" to={"/"}>
                 <img className="untouchable" src="https://firebasestorage.googleapis.com/v0/b/cyber-beta-204b9.appspot.com/o/new_irbis_files%2Flogo.svg?alt=media&token=91595f4b-c369-4b3c-b460-07fb760d5570" alt="site logo" width="144" height="112" />
             </Link>
