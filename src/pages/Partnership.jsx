@@ -1,6 +1,8 @@
 import { Handshake, Search, FileText, Globe, TrendingUp, DollarSign } from "lucide-react"
 import React from 'react'
+import { useNavigate } from "react-router-dom"
 export default function PartnershipPage() {
+  const navigate = useNavigate()
   return (
     <div className="w-full bg-gradient-to-b from-gray-50 to-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +70,7 @@ export default function PartnershipPage() {
                 <TrendingUp className="w-6 h-6 text-[#00BFFF] mr-3" />
                 <span className="text-gray-700 font-medium">Развитие вашего бизнеса</span>
               </div>
-              <button className="bg-[#00BFFF] hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors">
+              <button onClick={()=>navigate('/contact')} className="bg-[#00BFFF] hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors">
                 Стать партнером
               </button>
             </div>
