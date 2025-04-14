@@ -61,6 +61,7 @@ const Take = () => {
                             required
                             className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
                             type="text"
+                            placeholder="+998(__) ___-__-__"
                         />
                     </label>
 

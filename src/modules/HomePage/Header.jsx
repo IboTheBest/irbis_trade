@@ -1,6 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import HeaderModal from '../../components/HeaderModal';
 const Header = () => {
+    const [open, setOpen] = useState(false)
     return (
         <header className="site-header h-[100vh] pb-[100px] z-[2]">
             <div className="containers">
@@ -23,11 +24,12 @@ const Header = () => {
                         ))}
                     </ul>
                     <div className="flex items-center justify-center mt-[50px] gap-[20px]">
-                        <Link className="bg-white border-none rounded-full w-[270px] h-[55px] font-bold transition-all duration-700 text-[#00bfff] hover:bg-[#00bfff] text-center hover:text-white flex items-center justify-center">Оформить груз</Link>
-                        <Link className="bg-white border-none rounded-full w-[270px] h-[55px] font-bold transition-all duration-700 text-[#00bfff] hover:bg-[#00bfff] text-center hover:text-white flex items-center justify-center">Получить консультацию</Link>
+                        <button onClick={()=>setOpen(true)} className="bg-white border-none rounded-full w-[270px] h-[55px] font-bold transition-all duration-700 text-[#00bfff] hover:bg-[#00bfff] text-center hover:text-white flex items-center justify-center">Оформить груз</button>
+                        <button onClick={()=>setOpen(true)} className="bg-white border-none rounded-full w-[270px] h-[55px] font-bold transition-all duration-700 text-[#00bfff] hover:bg-[#00bfff] text-center hover:text-white flex items-center justify-center">Получить консультацию</button>
                     </div>
                 </div>
             </div>
+            <HeaderModal open={open} setOpen={setOpen}/>
         </header>
     );
 };

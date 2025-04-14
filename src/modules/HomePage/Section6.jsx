@@ -3,6 +3,7 @@ import postContact from '../../service/postContact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import toast, { Toaster } from 'react-hot-toast'
+import operator from "../../assets/images/callcenter.jpg"
 
 const Section6 = () => {
     const [message, setMessage] = useState("")
@@ -43,8 +44,8 @@ const Section6 = () => {
                 <div className="flex mt-[55px] items-start md:justify-evenly justify-center">
                     <img
                         className="hidden lg:block"
-                        src="./images/photo.png"
-                        alt="phone img"
+                        src={operator}
+                        alt={"call center"}
                         width={530}
                         height={600}
                         data-aos="fade-up"
@@ -74,6 +75,7 @@ const Section6 = () => {
                                 required
                                 className="bg-inherit text-black outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-300 w-[256px] md:w-[350px] p-2"
                                 type="text"
+                                placeholder="+998(__) ___-__-__"
                             />
                         </label>
 

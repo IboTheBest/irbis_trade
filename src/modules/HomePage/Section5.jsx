@@ -57,8 +57,7 @@ const Section5 = () => {
                             <ReusebleCard
                                 isBtn={true}
                                 imgClass={"w-[75px] mt-[40px] h-[74px]"}
-                                description={item.title}
-                                image={item.image}
+                                item={item}
                             />
                         </li>
                     ))}

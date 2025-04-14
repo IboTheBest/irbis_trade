@@ -22,6 +22,8 @@ const Contact = () => {
 
   const onFinish = (body) => {
       (postContact("/feedBackCall", body, toast));
+      console.log(body);
+      
 
   }
 
@@ -104,7 +106,7 @@ const Contact = () => {
                 { type: "text", message: "Пожалуйста, это обязательное место" },
               ]}
             >
-              <Input placeholder="Ваша почта" />
+              <Input placeholder="+998(__) ___-__-__" />
             </Form.Item>
 
             <Form.Item

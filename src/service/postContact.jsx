@@ -1,7 +1,8 @@
+import axios from 'axios'
 import { instance } from '../hooks/instance'
 
 const postContact = (api, body, toast) => {
-    instance().post(api, body)
+    axios.post(`https://irbis-trade.uz/api${api}`, body)
         .then(() => {
             toast.success("Ваше сообщение успешно отправлено")
         })
