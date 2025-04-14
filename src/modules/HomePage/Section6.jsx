@@ -3,7 +3,6 @@ import postContact from '../../service/postContact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import toast, { Toaster } from 'react-hot-toast'
-import operator from "https://cdn.irbis-trade.uz/images/callcenter.jpg"
 
 const Section6 = () => {
     const [message, setMessage] = useState("")
@@ -48,7 +47,7 @@ const Section6 = () => {
                 <div className="flex mt-[55px] items-start md:justify-evenly justify-center">
                     <img
                         className="hidden lg:block"
-                        src={operator}
+                        src="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/callcenter.jpg"
                         alt={"call center"}
                         width={530}
                         height={600}

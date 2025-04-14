@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import menu from 'https://cdn.irbis-trade.uz/imagesimages/menu.png';
 import { PATH } from '../hooks/PATH';
 import MenuDrawer from './MenuDrawer';
 export const navbarList = [
@@ -52,7 +51,7 @@ const Navbar = () => {
                 ))}
             </ul>
             <button onClick={()=> setOpen(!open)} className="mr-[30px] md:hidden">
-                <img className="untouchable" src={menu} alt="open navbar menu" width="40" height="40" />
+                <img className="untouchable" src="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/menu.png" alt="open navbar menu" width="40" height="40" />
             </button>
             <MenuDrawer open={open} setOpen={setOpen}/>
         </nav>

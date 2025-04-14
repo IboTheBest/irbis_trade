@@ -9,8 +9,8 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://irbis-trade.uz',
-        changeOrigin: true,
-        secure: false,
+        changeOrigin: false,
+        secure: true,
         rewrite: path => path.replace(/^\/api/, '/api'),
       }
     }

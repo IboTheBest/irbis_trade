@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Scale, Clock, BarChart3, FileText, Truck, Globe, CheckCircle } from "lucide-react"
 import AOS from 'aos';
 import 'aos/dist/aos.css';

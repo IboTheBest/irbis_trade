@@ -2,38 +2,33 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import img1 from "https://cdn.irbis-trade.uz/images/img1.svg"
-import img2 from "https://cdn.irbis-trade.uz/images/img2.svg"
-import img3 from "https://cdn.irbis-trade.uz/images/img3.svg"
-import img4 from "https://cdn.irbis-trade.uz/images/img4.svg"
-import img5 from "https://cdn.irbis-trade.uz/images/img5.svg"
 import ReusebleCard from '../../components/ReusebleCard'
 
 const Section5 = () => {
     const section5data = [
         {
             id: 1,
-            image: img1,
+            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img1.svg",
             title:"Полный спектр услуг УЭО"
         },
         {
             id: 2,
-            image: img2,
+            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img2.svg",
             title:"Таможенное оформление"
         },
         {
             id: 3,
-            image: img3,
+            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img3.svg",
             title:"Комплексная логистика"
         },
         {
             id: 4,
-            image: img4,
+            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img4.svg",
             title:"Автоперевозки"
         },
         {
             id: 5,
-            image: img5,
+            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img5.svg",
             title:"ЖД-перевозки"
         },
     ]

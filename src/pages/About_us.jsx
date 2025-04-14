@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import {User, FileText, Gift, List, Smartphone, PhoneCall } from 'lucide-react'
-import novey from "https://cdn.irbis-trade.uz/images/novey.png"
-import protherm from "https://cdn.irbis-trade.uz/images/protherm.png"
-import tenzi from "https://cdn.irbis-trade.uz/images/tenzi.png"
-import vileda from "https://cdn.irbis-trade.uz/images/vileda.png"
-import yandexgo from "https://cdn.irbis-trade.uz/images/yandexgo.png"
+// import novey from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/novey.png"
+// import protherm from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/protherm.png"
+// import tenzi from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/tenzi.png"
+// import vileda from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/vileda.png"
+// import yandexgo from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/yandexgo.png"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -103,7 +103,7 @@ export default function AboutUs() {
               data-aos-delay={index * 100}
             >
               <img
-                src={logo.image || `/placeholder.svg?height=80&width=160&text=Логотип+${index + 1}`}
+                src={logo.image}
                 alt={logo.name || `Клиент ${index + 1}`}
                 className="h-16 object-contain untouchable"
               />
@@ -174,9 +174,9 @@ const teamMembers = [
 
 // Client logos placeholder
 const clientLogos = [
-  { image:novey , name: "Клиент 1" },
-  { image:protherm , name: "Клиент 2" },
-  { image:tenzi , name: "Клиент 3" },
-  { image:vileda , name: "Клиент 4" },
-  { image:yandexgo , name: "Клиент 5" },
+  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/novey.png", name: "Клиент 1" },
+  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/protherm.png", name: "Клиент 2" },
+  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/tenzi.png", name: "Клиент 3" },
+  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/vileda.png", name: "Клиент 4" },
+  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/yandexgo.png", name: "Клиент 5" },
 ]
