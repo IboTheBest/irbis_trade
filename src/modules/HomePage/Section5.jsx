@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-import img1 from "../../assets/images/img1.svg"
-import img2 from "../../assets/images/img2.svg"
-import img3 from "../../assets/images/img3.svg"
-import img4 from "../../assets/images/img4.svg"
-import img5 from "../../assets/images/img5.svg"
+import img1 from "https://cdn.irbis-trade.uz/images/img1.svg"
+import img2 from "https://cdn.irbis-trade.uz/images/img2.svg"
+import img3 from "https://cdn.irbis-trade.uz/images/img3.svg"
+import img4 from "https://cdn.irbis-trade.uz/images/img4.svg"
+import img5 from "https://cdn.irbis-trade.uz/images/img5.svg"
 import ReusebleCard from '../../components/ReusebleCard'
 
 const Section5 = () => {

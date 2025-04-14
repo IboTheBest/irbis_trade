@@ -3,7 +3,7 @@ import postContact from '../../service/postContact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import toast, { Toaster } from 'react-hot-toast'
-import operator from "../../assets/images/callcenter.jpg"
+import operator from "https://cdn.irbis-trade.uz/images/callcenter.jpg"
 
 const Section6 = () => {
     const [message, setMessage] = useState("")

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import {User, FileText, Gift, List, Smartphone, PhoneCall } from 'lucide-react'
-import novey from "../assets/images/novey.png"
-import protherm from "../assets/images/protherm.png"
-import tenzi from "../assets/images/tenzi.png"
-import vileda from "../assets/images/vileda.png"
-import yandexgo from "../assets/images/yandexgo.png"
+import novey from "https://cdn.irbis-trade.uz/images/novey.png"
+import protherm from "https://cdn.irbis-trade.uz/images/protherm.png"
+import tenzi from "https://cdn.irbis-trade.uz/images/tenzi.png"
+import vileda from "https://cdn.irbis-trade.uz/images/vileda.png"
+import yandexgo from "https://cdn.irbis-trade.uz/images/yandexgo.png"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 

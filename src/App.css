@@ -35,7 +35,7 @@ body{
   background-color: #f5f5f5;
 }
 .site-header {
-  background-image: url('./assets/images/bg.jpg');
+  background-image: url('https://cdn.irbis-trade.uz/images/images/bg.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -45,7 +45,7 @@ body{
   top: 0;
 }
 .options-section {
-  background-image: url("./assets/images/options-section-bg.png");
+  background-image: url("https://cdn.irbis-trade.uz/images/options-section-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -59,7 +59,7 @@ body{
 }
 
 .take-section{
-  background-image: url("./assets/images/take-section-bg.png");
+  background-image: url("https://cdn.irbis-trade.uz/images/take-section-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

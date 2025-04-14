@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import menu from '../assets/images/manu.svg';
+import menu from 'https://cdn.irbis-trade.uz/imagesimages/menu.png';
 import { PATH } from '../hooks/PATH';
 import MenuDrawer from './MenuDrawer';
 export const navbarList = [
