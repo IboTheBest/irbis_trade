@@ -1,42 +1,82 @@
-import React, { useEffect } from 'react'
-import {User, FileText, Gift, List, Smartphone, PhoneCall } from 'lucide-react'
+import React, { useEffect } from "react";
+import {
+  User,
+  FileText,
+  Gift,
+  List,
+  Smartphone,
+  PhoneCall,
+} from "lucide-react";
 // import novey from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/novey.png"
 // import protherm from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/protherm.png"
 // import tenzi from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/tenzi.png"
 // import vileda from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/vileda.png"
 // import yandexgo from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/yandexgo.png"
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AboutUs() {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false })
-  }, [])
+    AOS.init({ duration: 1000, once: false });
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
       {/* Header Section */}
       <div className="text-center mb-16" data-aos="fade-down">
         <h1 className="text-4xl font-bold tracking-tight mb-4">О нас</h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">ЧП "IRBIS US" - эксперты в области таможенной очистки грузов с 2014 года</p>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          ЧП "IRBIS U.S." - эксперты в области таможенной очистки грузов с 2014
+          года
+        </p>
       </div>
 
       {/* Company Story */}
-      <div className="grid md:grid-cols-2 gap-12 items-center mb-20" data-aos="fade-up">
+      <div
+        className="grid md:grid-cols-2 gap-12 items-center mb-20"
+        data-aos="fade-up"
+      >
         <div>
           <h2 className="text-3xl font-bold mb-6">О компании</h2>
-          <p className="text-gray-600 mb-4">ЧП "IRBIS US" создан в 2014 году.</p>
-          <p className="text-gray-600 mb-4">Мы эксперты в области комплексной таможенной очистки грузов, пересекающих границу любым видом транспорта. Мы предлагаем полный пакет услуг, включая профессиональную консультацию по таможенному законодательству Республики Узбекистан, также таможенное оформление на любые режимы, помощь в получении всех необходимых сертификатов, организацию безопасной и быстрой доставки до пункта назначения, лицензированные транспортно-экспедиторские услуги.</p>
-          <p className="text-gray-600">Все решения предоставляются как в индивидуальном формате, так и по принципу «под ключ», исходя из ваших потребностей.</p>
+          <p className="text-gray-600 mb-4">
+            ЧП "IRBIS US" создан в 2014 году.
+          </p>
+          <p className="text-gray-600 mb-4">
+            Мы эксперты в области комплексной таможенной очистки грузов,
+            пересекающих границу любым видом транспорта. Мы предлагаем полный
+            пакет услуг, включая профессиональную консультацию по таможенному
+            законодательству Республики Узбекистан, также таможенное оформление
+            на любые режимы, помощь в получении всех необходимых сертификатов,
+            организацию безопасной и быстрой доставки до пункта назначения,
+            лицензированные транспортно-экспедиторские услуги.
+          </p>
+          <p className="text-gray-600">
+            Все решения предоставляются как в индивидуальном формате, так и по
+            принципу «под ключ», исходя из ваших потребностей.
+          </p>
         </div>
         <div className="rounded-lg overflow-hidden shadow-lg">
-          <iframe className="w-full" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3000.9422951872534!2d69.13865207605132!3d41.22302797132128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEzIyLjkiTiA2OcKwMDgnMjguNCJF!5e0!3m2!1sru!2s!4v1735909602268!5m2!1sru!2s" width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            className="w-full"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3000.9422951872534!2d69.13865207605132!3d41.22302797132128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEzIyLjkiTiA2OcKwMDgnMjguNCJF!5e0!3m2!1sru!2s!4v1735909602268!5m2!1sru!2s"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
 
       {/*  Advantages Section */}
-      <div className="mb-20 py-10 px-4 bg-gray-100 rounded-2xl" data-aos="fade-up">
-        <h2 className="text-3xl font-bold text-center mb-12">Наши преимущества</h2>
+      <div
+        className="mb-20 py-10 px-4 bg-gray-100 rounded-2xl"
+        data-aos="fade-up"
+      >
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Наши преимущества
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {advantages.map((advantage, index) => (
             <div
@@ -49,7 +89,10 @@ export default function AboutUs() {
               <div className="bg-gradient-to-br from-[#0288d1] to-[#01579b] p-6 h-full flex flex-col items-center">
                 {/* Icon with pulsing animation on hover */}
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#4caf50] to-[#388e3c] flex items-center justify-center mb-5 shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                  <advantage.icon className="h-10 w-10 text-white" strokeWidth={1.5} />
+                  <advantage.icon
+                    className="h-10 w-10 text-white"
+                    strokeWidth={1.5}
+                  />
                 </div>
 
                 {/* Text with better spacing */}
@@ -64,8 +107,8 @@ export default function AboutUs() {
           ))}
         </div>
       </div>
-  {/* Team Section */}
-  <div className="mb-20" data-aos="fade-down">
+      {/* Team Section */}
+      <div className="mb-20" data-aos="fade-down">
         <h2 className="text-3xl font-bold text-center mb-12">Наша команда</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
@@ -77,7 +120,12 @@ export default function AboutUs() {
             >
               <div className="aspect-square relative overflow-hidden bg-gray-100">
                 <img
-                  src={member.image || `/placeholder.svg?height=300&width=300&text=${encodeURIComponent(member.name)}`}
+                  src={
+                    member.image ||
+                    `/placeholder.svg?height=300&width=300&text=${encodeURIComponent(
+                      member.name
+                    )}`
+                  }
                   alt={member.name}
                   className="w-full h-full object-cover"
                 />
@@ -112,7 +160,7 @@ export default function AboutUs() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 // Advantages data based on the provided image
@@ -122,7 +170,8 @@ const advantages = [
     icon: User,
   },
   {
-    title: "Прозрачность работы: по желанию клиента отчет о проделанной работе на каждом ее этапе",
+    title:
+      "Прозрачность работы: по желанию клиента отчет о проделанной работе на каждом ее этапе",
     icon: FileText,
   },
   {
@@ -141,7 +190,7 @@ const advantages = [
     title: "Четкое консультирование опытными специалистами",
     icon: PhoneCall,
   },
-]
+];
 
 // Team members data
 const teamMembers = [
@@ -170,13 +219,33 @@ const teamMembers = [
     position: "Специалист",
     image: "/placeholder.svg?height=300&width=300",
   },
-]
+];
 
 // Client logos placeholder
 const clientLogos = [
-  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/novey.png", name: "Клиент 1" },
-  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/protherm.png", name: "Клиент 2" },
-  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/tenzi.png", name: "Клиент 3" },
-  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/vileda.png", name: "Клиент 4" },
-  { image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/yandexgo.png", name: "Клиент 5" },
-]
+  {
+    image:
+      "https://contents.irbis-trade.uz/images/partner_logos/logo_novey.svg",
+    name: "Novey",
+  },
+  {
+    image:
+      "https://contents.irbis-trade.uz/images/partner_logos/logo_proterm.svg",
+    name: "Protherm",
+  },
+  {
+    image:
+      "https://contents.irbis-trade.uz/images/partner_logos/logo_tenzi.svg",
+    name: "Tenzi",
+  },
+  {
+    image:
+      "https://contents.irbis-trade.uz/images/partner_logos/logo_vileda.svg",
+    name: "Vileda",
+  },
+  {
+    image:
+      "https://contents.irbis-trade.uz/images/partner_logos/logo_yandex_go.svg",
+    name: "Yandex Go",
+  },
+];
