@@ -14,7 +14,7 @@ export default function PartnershipPage() {
               <Handshake className="w-7 h-7 text-[#00BFFF]" />
             </div>
             <h2 className="text-2xl font-bold text-gray-800">
-              Компания ЧП "IRBIS US" предлагает Вам партнерство в бизнесе
+              Компания ЧП "IRBIS U.S." предлагает Вам партнерство в бизнесе
             </h2>
           </div>
 
