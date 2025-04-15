@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 py-10">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-blue-300">ЧП "IRBIS US"</h3>
+            <h3 className="text-lg font-bold mb-4 text-blue-300">ЧП "IRBIS U.S."</h3>
             <p className="text-gray-300 text-sm mb-4">
               Профессиональные услуги в сфере таможенного оформления и внешнеэкономической деятельности
             </p>
@@ -87,7 +87,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 py-6 px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} ЧП "IRBIS US". Все права защищены.
+              © {new Date().getFullYear()} ЧП "IRBIS U.S.". ИНН:303010254 Все права защищены.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

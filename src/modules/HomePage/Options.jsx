@@ -3,70 +3,74 @@ import { Scale, Clock, BarChart3, FileText, Truck, Globe, CheckCircle } from "lu
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export default function Options() {
-    AOS.init({
-      duration: 1000,  // You can change this value
-      once: false,      // Animation happens only once
-    });
+  AOS.init({
+    duration: 1000,  // You can change this value
+    once: false,      // Animation happens only once
+  });
   return (
-    <div className="w-full bg-gradient-to-b from-gray-50 to-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-20 text-gray-800">Наши Услуги</h1>
+    <section className="w-full bg-gradient-to-b from-gray-50 to-white py-20">
+      <div className='options-section'>
+      <div className='containers !py-[70px]'>
+          <h1 className="text-4xl font-bold text-center mb-20 text-white">Наши Услуги</h1>
 
-        {/* Excellence in Service */}
-        <div className="flex flex-col md:flex-row gap-16 mb-20">
-          <div className="md:w-1/2">
-            <h2 className="text-2xl font-bold text-gray-800 mb-8 border-b border-blue-200 pb-4">
-              Превосходство в обслуживании
-            </h2>
-            <p className="text-gray-700 leading-relaxed">
-              Наш набор услуг разработан таким образом, чтобы удовлетворить ваши разнообразные потребности. От
-              персонализированных решений до профессиональной поддержки, мы стремимся к предоставлению превосходства в
-              каждой услуге, которую предлагаем.
-            </p>
-          </div>
-          <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div data-aos="fade-up"
-              data-aos-duration="1000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
-                <Scale className="w-7 h-7 text-[#00BFFF]" />
-              </div>
-              <h3 className="text-lg font-medium text-gray-800 mb-3">Индивидуальные консультации</h3>
-              <p className="text-gray-600 text-sm">
-                Пользуйтесь персонализированными консультациями, которые учитывают ваши уникальные потребности,
-                предоставляя стратегические идеи и решения.
+          {/* Excellence in Service */}
+          <div className="flex flex-col md:flex-row gap-16 mb-20">
+            <div className="md:w-1/2">
+              <h2 className="text-2xl font-bold text-white mb-8 border-b border-blue-200 pb-4">
+                Превосходство в обслуживании
+              </h2>
+              <p className="text-white leading-relaxed">
+                Наш набор услуг разработан таким образом, чтобы удовлетворить ваши разнообразные потребности. От
+                персонализированных решений до профессиональной поддержки, мы стремимся к предоставлению превосходства в
+                каждой услуге, которую предлагаем.
               </p>
             </div>
-            <div data-aos="fade-up"
-              data-aos-duration="1000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
-                <Clock className="w-7 h-7 text-[#00BFFF]" />
+            <div className="md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div data-aos="fade-up"
+                data-aos-duration="1000" className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
+                  <Scale className="w-7 h-7 text-[#00BFFF]" />
+                </div>
+                <h3 className="text-lg font-medium text-gray-800 mb-3">Индивидуальные консультации</h3>
+                <p className="text-gray-600 text-sm">
+                  Пользуйтесь персонализированными консультациями, которые учитывают ваши уникальные потребности,
+                  предоставляя стратегические идеи и решения.
+                </p>
               </div>
-              <h3 className="text-lg font-medium text-gray-800 mb-3">24/7 поддержка клиентов</h3>
-              <p className="text-gray-600 text-sm">
-                Наслаждайтесь спокойствием с нашей круглосуточной поддержкой клиентов, гарантирующей помощь в любое
-                время, день и ночь.
-              </p>
-            </div>
-            <div data-aos="fade-up"
-              data-aos-duration="1000"className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
-                <BarChart3 className="w-7 h-7 text-[#00BFFF]" />
+              <div data-aos="fade-up"
+                data-aos-duration="1000" className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
+                  <Clock className="w-7 h-7 text-[#00BFFF]" />
+                </div>
+                <h3 className="text-lg font-medium text-gray-800 mb-3">24/7 поддержка клиентов</h3>
+                <p className="text-gray-600 text-sm">
+                  Наслаждайтесь спокойствием с нашей круглосуточной поддержкой клиентов, гарантирующей помощь в любое
+                  время, день и ночь.
+                </p>
               </div>
-              <h3 className="text-lg font-medium text-gray-800 mb-3">Эффективное управление</h3>
-              <p className="text-gray-600 text-sm">
-                Наши экспертные услуги по управлению проектами обеспечивают эффективное выполнение задач, при котором
-                соблюдаются сроки и обеспечивается высокое качество работы.
-              </p>
+              <div data-aos="fade-up"
+                data-aos-duration="1000" className="flex flex-col items-start bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-4 border border-blue-100">
+                  <BarChart3 className="w-7 h-7 text-[#00BFFF]" />
+                </div>
+                <h3 className="text-lg font-medium text-gray-800 mb-3">Эффективное управление</h3>
+                <p className="text-gray-600 text-sm">
+                  Наши экспертные услуги по управлению проектами обеспечивают эффективное выполнение задач, при котором
+                  соблюдаются сроки и обеспечивается высокое качество работы.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </div>
 
         {/* Services */}
 
-        <div className="grid gap-8 md:grid-cols-2 mb-16">
+      <div className="max-w-7xl !py-[70px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-2 ">
           {/* Consultation */}
           <div data-aos="fade-up"
-              data-aos-duration="1000" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            data-aos-duration="1000" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mr-4 border border-blue-100">
                 <FileText className="w-6 h-6 text-[#00BFFF]" />
@@ -99,7 +103,7 @@ export default function Options() {
 
           {/* Contract Support */}
           <div data-aos="fade-up"
-              data-aos-duration="1000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            data-aos-duration="1000" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mr-4 border border-blue-100">
                 <Globe className="w-6 h-6 text-[#00BFFF]" />
@@ -135,7 +139,7 @@ export default function Options() {
 
           {/* Customs Clearance */}
           <div data-aos="fade-up"
-              data-aos-duration="1000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            data-aos-duration="1000" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mr-4 border border-blue-100">
                 <FileText className="w-6 h-6 text-[#00BFFF]" />
@@ -179,7 +183,7 @@ export default function Options() {
 
           {/* Logistics */}
           <div data-aos="fade-up"
-              data-aos-duration="1000"className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+            data-aos-duration="1000" className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mr-4 border border-blue-100">
                 <Truck className="w-6 h-6 text-[#00BFFF]" />
@@ -198,7 +202,7 @@ export default function Options() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

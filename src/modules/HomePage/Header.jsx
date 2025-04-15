@@ -18,7 +18,7 @@ const Header = () => {
                             { src: 'parcel', text: 'Минимальные риски' }
                         ].map((item, index) => (
                             <li key={index} className="flex flex-col items-center">
-                                <img className="untouchable" src={`https://firebasestorage.googleapis.com/v0/b/cyber-beta-204b9.appspot.com/o/new_irbis_files%2F${item.src}.svg?alt=media`} alt={item.src} width="110" />
+                                <img className="" src={`https://contents.irbis-trade.uz/images/app_images/${item.src}.svg`} alt={item.src} width="110" />
                                 <p className="text-white font-normal">{item.text}</p>
                             </li>
                         ))}

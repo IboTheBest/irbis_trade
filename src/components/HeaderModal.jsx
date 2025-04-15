@@ -1,6 +1,7 @@
 import { Modal, Button } from 'antd'
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
+import postContact from '../service/postContact'
 
 const HeaderModal = ({ open, setOpen }) => {
     const [message, setMessage] = useState("")
@@ -34,7 +35,6 @@ const HeaderModal = ({ open, setOpen }) => {
             onCancel={() => setOpen(false)}
             footer={null}
             centered
-            bodyStyle={{ padding: '2rem' }}
         >
             <Toaster position="top-center" reverseOrder={false} />
             <div className="flex flex-col items-center gap-6">
@@ -42,7 +42,7 @@ const HeaderModal = ({ open, setOpen }) => {
 
                 <div className="w-full flex flex-col gap-4">
                     <label className="flex flex-col text-sm text-gray-700">
-                        Имя пользователя
+                        Имя
                         <input
                             value={username}
                             onChange={(e) => setUsername(e.target.value)}

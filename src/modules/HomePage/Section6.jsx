@@ -27,7 +27,6 @@ const Section6 = () => {
             clinet_phone_number: contact,
             message
         }
-        console.log(body);
 
         postContact("/feedBackCall", body, toast)
 
@@ -37,7 +36,7 @@ const Section6 = () => {
 
     }
     return (
-        <section>
+        <section className='py-[80px]'>
             <Toaster position="top-center" reverseOrder={false} />
             <div className="containers">
                 <h2 className="text-[24px] md:text-[34px] text-center font-bold" data-aos="fade-up">
@@ -47,7 +46,7 @@ const Section6 = () => {
                 <div className="flex mt-[55px] items-start md:justify-evenly justify-center">
                     <img
                         className="hidden lg:block"
-                        src="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/callcenter.jpg"
+                        src="https://contents.irbis-trade.uz/images/app_images/call_center.svg"
                         alt={"call center"}
                         width={530}
                         height={600}
@@ -60,7 +59,7 @@ const Section6 = () => {
                         </h3>
 
                         <label className="flex flex-col">
-                            <span className="text-black font-light text-[12px]">Имя пользователя</span>
+                            <span className="text-black font-light text-[12px]">Имя</span>
                             <input
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}

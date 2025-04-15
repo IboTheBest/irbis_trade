@@ -7,11 +7,12 @@ import {
   Smartphone,
   PhoneCall,
 } from "lucide-react";
-// import novey from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/novey.png"
-// import protherm from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/protherm.png"
-// import tenzi from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/tenzi.png"
-// import vileda from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/vileda.png"
-// import yandexgo from "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/yandexgo.png"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+
+import { Autoplay } from 'swiper/modules';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -39,7 +40,7 @@ export default function AboutUs() {
         <div>
           <h2 className="text-3xl font-bold mb-6">О компании</h2>
           <p className="text-gray-600 mb-4">
-            ЧП "IRBIS US" создан в 2014 году.
+            ЧП "IRBIS U.S." создан в 2014 году.
           </p>
           <p className="text-gray-600 mb-4">
             Мы эксперты в области комплексной таможенной очистки грузов,
@@ -142,23 +143,42 @@ export default function AboutUs() {
       {/* Client Logos Section */}
       <div className="mb-20" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center mb-12">Наши клиенты</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center">
+
+        <Swiper
+          modules={[Autoplay]}
+          slidesPerView={2}
+          spaceBetween={20}
+          loop={true}
+          speed={3000} // long transition duration
+          autoplay={{
+            delay: 0, // no delay between transitions
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
+          allowTouchMove={false} // optional: disable manual swipe
+          grabCursor={false}
+        >
           {clientLogos.map((logo, index) => (
-            <div
-              key={index}
-              className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <img
-                src={logo.image}
-                alt={logo.name || `Клиент ${index + 1}`}
-                className="h-16 object-contain untouchable"
-              />
-            </div>
+            <SwiperSlide key={index}>
+              <div
+                className="flex justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <img
+                  src={logo.image}
+                  alt={logo.name || `Клиент ${index + 1}`}
+                  className="h-16 object-contain untouchable"
+                />
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
+
     </div>
   );
 }

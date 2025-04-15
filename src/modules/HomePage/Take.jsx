@@ -28,7 +28,6 @@ const Take = () => {
             message
         }
         postContact("/feedBackCall", body, toast)
-        console.log(body);
 
         setMessage("")
         setUserName("")
@@ -47,7 +46,7 @@ const Take = () => {
                 </p>
                 <form onSubmit={handleSubmit} className="flex items-center justify-center gap-5 flex-wrap pt-[50px]" data-aos="fade-up">
                     <label className="flex flex-col">
-                        <span className="text-white font-extralight text-[12px]">Имя пользователя</span>
+                        <span className="text-white font-extralight text-[12px]">Имя</span>
                         <input
                             value={setUsername}
                             onChange={(e) => setUserName(e.target.value)}

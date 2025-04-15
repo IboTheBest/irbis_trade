@@ -8,28 +8,28 @@ const Section5 = () => {
     const section5data = [
         {
             id: 1,
-            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img1.svg",
-            title:"Полный спектр услуг УЭО"
+            img_url: "https://contents.irbis-trade.uz/images/app_images/costumerSupport.svg",
+            title: "Полный спектр услуг УЭО"
         },
         {
             id: 2,
-            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img2.svg",
-            title:"Таможенное оформление"
+            img_url: "https://contents.irbis-trade.uz/images/app_images/schedule.svg",
+            title: "Таможенное оформление"
         },
         {
             id: 3,
-            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img3.svg",
-            title:"Комплексная логистика"
+            img_url: "https://contents.irbis-trade.uz/images/app_images/toDo.svg",
+            title: "Комплексная логистика"
         },
         {
             id: 4,
-            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img4.svg",
-            title:"Автоперевозки"
+            img_url: "https://contents.irbis-trade.uz/images/app_images/fastDelivery.svg",
+            title: "Автоперевозки"
         },
         {
             id: 5,
-            image: "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/img5.svg",
-            title:"ЖД-перевозки"
+            img_url: "https://contents.irbis-trade.uz/images/app_images/train.svg",
+            title: "ЖД-перевозки"
         },
     ]
 
@@ -50,6 +50,7 @@ const Section5 = () => {
                     {section5data.map(item => (
                         <li key={item.id} data-aos="fade-up">
                             <ReusebleCard
+                                extraClass={"!py-[20px]"}
                                 isBtn={true}
                                 imgClass={"w-[75px] mt-[40px] h-[74px]"}
                                 item={item}

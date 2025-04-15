@@ -67,7 +67,7 @@ const Navbar = () => {
       <button onClick={() => setOpen(!open)} className="mr-[30px] md:hidden">
         <img
           className="untouchable"
-          src="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/menu.png"
+          src="https://contents.irbis-trade.uz/images/app_images/menu.svg"
           alt="open navbar menu"
           width="40"
           height="40"

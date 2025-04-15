@@ -2,11 +2,11 @@ import React from "react";
 import { Button, Card } from "antd";
 import { useNavigate } from "react-router-dom";
 const { Meta } = Card;
-const ReusebleCard = ({ item, isBtn, imgClass }) => {
+const ReusebleCard = ({ item, isBtn, imgClass, extraClass }) => {
   const navigate = useNavigate();
   return (  
     <Card
-      className="!rounded-[30px] !py-[20px]"
+      className={`!rounded-[20px] !outline-none  ${extraClass}`}
       type="inner"
       hoverable
       style={{ width: 250 }}

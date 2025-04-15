@@ -9,7 +9,7 @@ const Hero = () => {
                 </h2>
                 <div className="max-w-[1200px] mx-auto text-center">
                     <p className="md:text-[21px] leading-[30px] mt-[30px]">
-                        <strong className='capitalize'>Irbis uychi soccer</strong>
+                        <strong className='capitalize'>IRBIS CUSTOMS BROKER</strong>
                         — уникальная для Узбекского и СНГ рынка компания, реализующая концепцию комплексного подхода к таможенному оформлению и ВЭД.
                     </p>
                     <p className="text-[21px] leading-[30px] mt-[40px]">
