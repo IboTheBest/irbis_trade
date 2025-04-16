@@ -3,6 +3,7 @@ import postContact from '../../service/postContact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { useAppContext } from '../../context/context'
+import { Toaster } from 'react-hot-toast'
 
 const Section6 = () => {
     const { setLoading, setModalVisible } = useAppContext();
