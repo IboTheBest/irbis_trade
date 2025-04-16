@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import HeaderModal from '../../components/HeaderModal';
+import LoadingModal from '../../components/LoadingModal';
+import { useAppContext } from '../../context/context';
+import { Button } from 'antd';
+
 const Header = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const { modalVisible, setModalVisible, loading } = useAppContext();
+
     return (
         <header className="site-header h-[100vh] pb-[100px] z-[2]">
             <div className="containers">
@@ -24,12 +30,24 @@ const Header = () => {
                         ))}
                     </ul>
                     <div className="flex items-center justify-center mt-[50px] gap-[20px]">
-                        <button onClick={()=>setOpen(true)} className="bg-white border-none rounded-full w-[270px] h-[55px] font-bold transition-all duration-700 text-[#00bfff] hover:bg-[#00bfff] text-center hover:text-white flex items-center justify-center">Оформить груз</button>
-                        <button onClick={()=>setOpen(true)} className="bg-white border-none rounded-full w-[270px] h-[55px] font-bold transition-all duration-700 text-[#00bfff] hover:bg-[#00bfff] text-center hover:text-white flex items-center justify-center">Получить консультацию</button>
+                        <Button
+                            onClick={() => setOpen(true)}
+                            className="!bg-white !border-none !rounded-full !w-[270px] !h-[55px] !font-bold !transition-all !duration-700 !text-[#00bfff] hover:bg-[#00bfff] hover:text-white !flex !items-center !justify-center"
+                        >
+                            Оформить груз
+                        </Button>
+
+                        <Button
+                            onClick={() => setOpen(true)}
+                            className="!bg-white !border-none !rounded-full !w-[270px] !h-[55px] !font-bold !transition-all !duration-700 !text-[#00bfff] hover:bg-[#00bfff] hover:text-white !flex !items-center !justify-center"
+                        >
+                            Получить консультацию
+                        </Button>
                     </div>
                 </div>
             </div>
-            <HeaderModal open={open} setOpen={setOpen}/>
+            <LoadingModal setVisible={setModalVisible} visible={modalVisible} message="Данные успешно отправлены!" onClose={() => setModalVisible(false)} />
+            <HeaderModal open={open} setOpen={setOpen} />
         </header>
     );
 };

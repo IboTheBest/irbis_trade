@@ -3,8 +3,11 @@ import postContact from '../../service/postContact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import toast, { Toaster } from 'react-hot-toast'
+import { useAppContext } from '../../context/context'
 
 const Take = () => {
+
+    const { setLoading, setModalVisible } = useAppContext();
     const [message, setMessage] = useState("")
     const [username, setUserName] = useState("")
     const [contact, setContact] = useState()
@@ -29,7 +32,7 @@ const Take = () => {
         }
         console.log(body);
 
-        postContact("/feedBackCall", body, toast)
+        postContact("/feedBackCall", body, toast, setLoading, setModalVisible)
 
         setMessage("")
         setUserName("")

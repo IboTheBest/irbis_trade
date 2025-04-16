@@ -2,11 +2,13 @@ import { Modal, Button } from 'antd'
 import React, { useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import postContact from '../service/postContact'
+import { useAppContext } from '../context/context'
 
 const HeaderModal = ({ open, setOpen }) => {
     const [message, setMessage] = useState("")
     const [username, setUsername] = useState("")
     const [contact, setContact] = useState("")
+    const { loading, setLoading, setModalVisible } = useAppContext();
 
     const handleModalDataSent = () => {
         if (!username || !contact || !message) {
@@ -20,7 +22,7 @@ const HeaderModal = ({ open, setOpen }) => {
             message
         }
 
-        postContact("/feedBackCall", body, toast)
+        postContact("/feedBackCall", body, toast, setLoading, setModalVisible)
 
         // Reset form
         setUsername("")
@@ -57,7 +59,7 @@ const HeaderModal = ({ open, setOpen }) => {
                         Контактный телефон
                         <span className='absolute top-[32px] left-[7px]'>+</span>
                         <input
-                            onFocus={()=>setContact(998)}
+                            onFocus={() => setContact(998)}
                             value={contact}
                             onChange={(e) => setContact(e.target.value)}
                             required
@@ -81,6 +83,7 @@ const HeaderModal = ({ open, setOpen }) => {
                 </div>
 
                 <Button
+                    loading={loading}
                     type="primary"
                     className="w-full bg-blue-500 hover:bg-blue-600 transition-all"
                     onClick={handleModalDataSent}
