@@ -22,28 +22,25 @@ const Contact = () => {
   }, [])
 
   const [form] = Form.useForm();
-  const [loading, setLoading] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const onFinish = (body) => {
     const phoneNumber = form.getFieldValue("clinet_phone_number");
     const formattedPhoneNumber = `+${phoneNumber}`;
     body.clinet_phone_number = formattedPhoneNumber;
 
-    setLoading((prev) => prev + 1);
+    setLoading(true);
 
     setTimeout(() => {
       postContact("/feedBackCall", body, toast);
       form.resetFields();
-    }, 1000);
-
-    setTimeout(() => {
-      setLoading((prev) => prev - 1);
-    }, 1500);
+      setLoading(false);
+    }, 3000);
   }
 
   return (
     <div className="max-w-6xl mx-auto p-4 md:p-8" data-aos="fade-up">
-      {loading > 0 && <LoadingModal key={loading} message="Отправка данных..." />}
+      <LoadingModal visible={loading} message="Отправка данных..." />
       <Toaster position="top-center" reverseOrder={false} />
       <Title level={2} className="mb-6" data-aos="fade-down">
         Свяжитесь с нами
