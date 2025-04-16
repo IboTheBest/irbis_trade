@@ -73,7 +73,7 @@ export default function Footer() {
               ></iframe>
             </div>
             <a 
-              href="https://yandex.ru/maps/?text=Ташкентская+область+Зангиатинский+район+таможенный+пост+Аркбулак" 
+              href="https://yandex.uz/maps/-/CHb6VY~F" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center text-sm text-blue-300 hover:text-blue-200 mt-2"
@@ -87,7 +87,7 @@ export default function Footer() {
         <div className="border-t border-gray-700 py-6 px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} ЧП "IRBIS U.S.". ИНН:303010254 Все права защищены.
+              © {new Date().getFullYear()} ЧП "IRBIS U.S.". ИНН: 303010254 <br /> Все права защищены.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

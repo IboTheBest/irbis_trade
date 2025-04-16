@@ -9,22 +9,22 @@ const Section6 = () => {
     const [username, setUsername] = useState("")
     const [contact, setContact] = useState("")
 
-    function handleFocus(){
-        setContact("+998")
+    function handleFocus() {
+        setContact(998)
     }
 
-        useEffect(() => {
-            AOS.init({
-                duration: 1000,
-                once: false,
-            })
-        }, [])
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            once: false,
+        })
+    }, [])
 
     function handleSubmit(e) {
         e.preventDefault()
         const body = {
             client_name: username,
-            clinet_phone_number: contact,
+            clinet_phone_number: `+${contact}`,
             message
         }
 
@@ -71,15 +71,18 @@ const Section6 = () => {
 
                         <label className="flex flex-col">
                             <span className="text-black font-light text-[12px]">Контактный телефон</span>
-                            <input
-                                onFocus={handleFocus}
-                                value={contact}
-                                onChange={(e) => setContact(e.target.value)}
-                                required
-                                className="bg-inherit text-black outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-300 w-[256px] md:w-[350px] p-2"
-                                type="text"
-                                placeholder="+998(__) ___-__-__"
-                            />
+                            <div>
+                                <span className='mr-[-6px]'>+</span>
+                                <input
+                                    onFocus={handleFocus}
+                                    value={contact}
+                                    onChange={(e) => setContact(e.target.value)}
+                                    required
+                                    className="bg-inherit text-black outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-300 w-[256px] md:w-[350px] p-2"
+                                    type="text"
+                                    placeholder="998(__) ___-__-__"
+                                />
+                            </div>
                         </label>
 
                         <label className="flex flex-col">

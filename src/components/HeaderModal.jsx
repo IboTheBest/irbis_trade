@@ -16,7 +16,7 @@ const HeaderModal = ({ open, setOpen }) => {
 
         const body = {
             client_name: username,
-            clinet_phone_number: contact,
+            clinet_phone_number: `+${contact}`,
             message
         }
 
@@ -53,15 +53,17 @@ const HeaderModal = ({ open, setOpen }) => {
                         />
                     </label>
 
-                    <label className="flex flex-col text-sm text-gray-700">
+                    <label className="flex flex-col text-sm relative text-gray-700">
                         Контактный телефон
+                        <span className='absolute top-[32px] left-[7px]'>+</span>
                         <input
+                            onFocus={()=>setContact(998)}
                             value={contact}
                             onChange={(e) => setContact(e.target.value)}
                             required
-                            className="mt-1 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
-                            type="text"
-                            placeholder="+998(__) ___-__-__"
+                            className="mt-1 py-2 px-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
+                            type="number"
+                            placeholder="998(__) ___-__-__"
                         />
                     </label>
 

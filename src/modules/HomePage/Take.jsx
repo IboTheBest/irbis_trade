@@ -6,11 +6,11 @@ import toast, { Toaster } from 'react-hot-toast'
 
 const Take = () => {
     const [message, setMessage] = useState("")
-    const [setUsername, setUserName] = useState("")
-    const [contact, setContact] = useState("")
+    const [username, setUserName] = useState("")
+    const [contact, setContact] = useState()
 
     function handleFocus() {
-        setContact("+998")
+        setContact(998)
     }
 
     useEffect(() => {
@@ -24,9 +24,11 @@ const Take = () => {
         e.preventDefault()
         const body = {
             client_name: username,
-            clinet_phone_number: contact,
+            clinet_phone_number: `+${contact}`,
             message
         }
+        console.log(body);
+
         postContact("/feedBackCall", body, toast)
 
         setMessage("")
@@ -44,11 +46,11 @@ const Take = () => {
                 <p className="text-[21px] text-white leading-[30px] font-normal text-center my-[30px]" data-aos="fade-up">
                     Предложение с максимальной выгодой <span className="font-bold">для долгосрочных партнеров и клиентов</span>
                 </p>
-                <form onSubmit={handleSubmit} className="flex items-center justify-center gap-5 flex-wrap pt-[50px]" data-aos="fade-up">
+                <form onSubmit={handleSubmit} className="flex items-end justify-center gap-5 flex-wrap pt-[50px]" data-aos="fade-up">
                     <label className="flex flex-col">
                         <span className="text-white font-extralight text-[12px]">Имя</span>
                         <input
-                            value={setUsername}
+                            value={username}
                             onChange={(e) => setUserName(e.target.value)}
                             required
                             className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
@@ -58,15 +60,18 @@ const Take = () => {
 
                     <label className="flex flex-col">
                         <span className="text-white font-extralight text-[12px]">Контактный телефон</span>
-                        <input
-                            onFocus={handleFocus}
-                            value={contact}
-                            onChange={(e) => setContact(e.target.value)}
-                            required
-                            className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-2"
-                            type="text"
-                            placeholder="+998(__) ___-__-__"
-                        />
+                        <div>
+                            <span className='mr-[-10px] text-white'>+</span>
+                            <input
+                                onFocus={handleFocus}
+                                value={contact}
+                                onChange={(e) => setContact(e.target.value)}
+                                required
+                                className="bg-inherit text-white outline-none border-b-[3px] border-b-slate-300 focus:border-b-[#00bfff] transition-all duration-400 max-w-[550px] p-3"
+                                type="number"
+                                placeholder="998(__) ___-__-__"
+                            />
+                        </div>
                     </label>
 
                     <label className="flex flex-col">
