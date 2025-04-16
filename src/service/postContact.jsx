@@ -6,12 +6,10 @@ const postContact = (api, body, toast, setLoading, setLoadingModal) => {
 
     axios.post(`https://irbis-trade.uz/api${api}`, body)
         .then(() => {
-            toast.success("Ваше сообщение успешно отправлено");
             setLoading(false);
             setLoadingModal(true)
         })
         .catch(error => {
-            toast.error("Ошибка при отправке сообщения");
             console.error(error);
             setLoading(false);
         });

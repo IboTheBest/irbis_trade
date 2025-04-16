@@ -10,7 +10,6 @@ import {
   LinkedinOutlined,
 } from "@ant-design/icons";
 import postContact from '../service/postContact';
-import toast, { Toaster } from 'react-hot-toast';
 import LoadingModal from '../components/LoadingModal';
 
 const { Title } = Typography;
@@ -30,7 +29,7 @@ const Contact = () => {
     const formattedPhoneNumber = `+${phoneNumber}`;
     body.clinet_phone_number = formattedPhoneNumber;
 
-    postContact("/feedBackCall", body, toast, setLoading, setModalVisible);  // Use the updated postContact function
+    postContact("/feedBackCall", body, setLoading, setModalVisible);  // Use the updated postContact function
     form.resetFields();  // Reset form fields after submission
   };
 

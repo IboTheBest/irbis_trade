@@ -1,8 +1,8 @@
 import { Modal, Button } from 'antd'
 import React, { useState } from 'react'
-import toast, { Toaster } from 'react-hot-toast'
 import postContact from '../service/postContact'
 import { useAppContext } from '../context/context'
+import toast from 'react-hot-toast'
 
 const HeaderModal = ({ open, setOpen }) => {
     const [message, setMessage] = useState("")
@@ -22,7 +22,7 @@ const HeaderModal = ({ open, setOpen }) => {
             message
         }
 
-        postContact("/feedBackCall", body, toast, setLoading, setModalVisible)
+        postContact("/feedBackCall", body, setLoading, setModalVisible)
 
         // Reset form
         setUsername("")

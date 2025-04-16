@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import postContact from '../../service/postContact'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import toast, { Toaster } from 'react-hot-toast'
 import { useAppContext } from '../../context/context'
 
 const Section6 = () => {
@@ -30,7 +29,7 @@ const Section6 = () => {
             message
         }
 
-        postContact("/feedBackCall", body, toast, setLoading, setModalVisible)
+        postContact("/feedBackCall", body, setLoading, setModalVisible)
 
         setMessage("")
         setUsername("")
