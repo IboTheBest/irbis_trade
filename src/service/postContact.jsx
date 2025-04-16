@@ -1,13 +1,12 @@
 import axios from 'axios'
-import { instance } from '../hooks/instance'
 
-const postContact = (api, body, toast, setLoading, setLoadingModal) => {
+const postContact = (api, body, setLoading, setModalVisible) => {
     setLoading(true);  // Open the loading modal
 
     axios.post(`https://irbis-trade.uz/api${api}`, body)
         .then(() => {
             setLoading(false);
-            setLoadingModal(true)
+            setModalVisible(true)
         })
         .catch(error => {
             console.error(error);
