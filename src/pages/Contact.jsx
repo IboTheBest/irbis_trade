@@ -1,46 +1,46 @@
-import React, { useEffect, useState } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { Card, Form, Input, Button, Typography } from "antd"
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Card, Form, Input, Button, Typography } from "antd";
 import {
   MailOutlined,
   PhoneOutlined,
   EnvironmentOutlined,
   InstagramOutlined,
   LinkedinOutlined,
-} from "@ant-design/icons"
-import postContact from '../service/postContact'
-import toast, { Toaster } from 'react-hot-toast'
+} from "@ant-design/icons";
+import postContact from '../service/postContact';
+import toast, { Toaster } from 'react-hot-toast';
 import LoadingModal from '../components/LoadingModal';
 
-const { Title } = Typography
-const { TextArea } = Input
+const { Title } = Typography;
+const { TextArea } = Input;
 
 const Contact = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 })
-  }, [])
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
 
   const onFinish = (body) => {
     const phoneNumber = form.getFieldValue("clinet_phone_number");
     const formattedPhoneNumber = `+${phoneNumber}`;
     body.clinet_phone_number = formattedPhoneNumber;
 
-    setLoading(true);
+    postContact("/feedBackCall", body, toast, setLoading, setModalVisible);  // Use the updated postContact function
+    form.resetFields();  // Reset form fields after submission
+  };
 
-    setTimeout(() => {
-      postContact("/feedBackCall", body, toast);
-      form.resetFields();
-      setLoading(false);
-    }, 3000);
-  }
+  const handleCloseModal = () => {
+    setModalVisible(false);  // Close the modal when button is clicked
+  };
 
   return (
     <div className="max-w-6xl mx-auto p-4 md:p-8" data-aos="fade-up">
-      <LoadingModal visible={loading} message="Отправка данных..." />
+      <LoadingModal setVisible={setModalVisible} visible={modalVisible} message="Данные успешно отправлены!" onClose={handleCloseModal} />
       <Toaster position="top-center" reverseOrder={false} />
       <Title level={2} className="mb-6" data-aos="fade-down">
         Свяжитесь с нами
@@ -104,21 +104,13 @@ const Contact = () => {
         {/* Форма обратной связи */}
         <Card data-aos="fade-up">
           <Title level={4}>Отправьте нам сообщение</Title>
-
           <Form form={form} layout="vertical" onFinish={onFinish} className="mt-4 relative">
             <span className='absolute top-[121px] z-50 left-[11px]'>+</span>
             <Form.Item name="client_name" label="Имя" rules={[{ required: true, message: "Пожалуйста, введите ваше имя" }]}>
               <Input placeholder="Ваше имя" />
             </Form.Item>
 
-            <Form.Item
-              className='relative'
-              name="clinet_phone_number"
-              label="Номер телефона"
-              rules={[
-                { required: true, message: "Пожалуйста, введите номер телефона" },
-              ]}
-            >
+            <Form.Item name="clinet_phone_number" label="Номер телефона" rules={[{ required: true, message: "Пожалуйста, введите номер телефона" }]}>
               <Input
                 type="number"
                 className='!px-[20px]'
@@ -133,16 +125,12 @@ const Contact = () => {
               />
             </Form.Item>
 
-            <Form.Item
-              name="message"
-              label="Сообщение"
-              rules={[{ required: true, message: "Пожалуйста, введите сообщение" }]}
-            >
+            <Form.Item name="message" label="Сообщение" rules={[{ required: true, message: "Пожалуйста, введите сообщение" }]}>
               <TextArea placeholder="Ваше сообщение" rows={4} />
             </Form.Item>
 
             <Form.Item>
-              <Button type="primary" htmlType="submit" className="w-full">
+              <Button type="primary" htmlType="submit" className="w-full" loading={loading} disabled={loading}>
                 Отправить сообщение
               </Button>
             </Form.Item>
@@ -151,14 +139,11 @@ const Contact = () => {
       </div>
 
       {/* Карта */}
-      <div
-        className="mt-10 h-[400px] w-full rounded bg-gray-100 flex items-center justify-center text-gray-500"
-        data-aos="fade-up"
-      >
+      <div className="mt-10 h-[400px] w-full rounded bg-gray-100 flex items-center justify-center text-gray-500" data-aos="fade-up">
         <iframe className="w-full" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3000.9422951872534!2d69.13865207605132!3d41.22302797132128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDHCsDEzIyLjkiTiA2OcKwMDgnMjguNCJF!5e0!3m2!1sru!2s!4v1735909602268!5m2!1sru!2s" width="600" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
