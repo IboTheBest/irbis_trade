@@ -17,7 +17,7 @@ const Home = () => {
         />
         <meta
           property="og:image"
-          content="https://storage.cloupard.uz/irbisuz/websiteassets/irbis_logo.svg"
+          content="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/websiteassets/irbis_logo.svg"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://irbis-trade.uz/" />

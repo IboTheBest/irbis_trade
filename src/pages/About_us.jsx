@@ -36,7 +36,7 @@ export default function AboutUs() {
         />
         <meta
           property="og:image"
-          content="https://storage.cloupard.uz/irbisuz/websiteassets/irbis_logo.svg"
+          content="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/websiteassets/irbis_logo.svg"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://irbis-trade.uz/" />
@@ -267,27 +267,27 @@ const teamMembers = [
 const clientLogos = [
   {
     image:
-      "https://storage.cloupard.uz/irbisuz/images/partner_logos/logo_novey.svg",
+      "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/partner_logos/logo_novey.svg",
     name: "Novey",
   },
   {
     image:
-      "https://storage.cloupard.uz/irbisuz/images/partner_logos/logo_proterm.svg",
+      "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/partner_logos/logo_proterm.svg",
     name: "Protherm",
   },
   {
     image:
-      "https://storage.cloupard.uz/irbisuz/images/partner_logos/logo_tenzi.svg",
+      "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/partner_logos/logo_tenzi.svg",
     name: "Tenzi",
   },
   {
     image:
-      "https://storage.cloupard.uz/irbisuz/images/partner_logos/logo_vileda.svg",
+      "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/partner_logos/logo_vileda.svg",
     name: "Vileda",
   },
   {
     image:
-      "https://storage.cloupard.uz/irbisuz/images/partner_logos/logo_yandex_go.svg",
+      "https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/partner_logos/logo_yandex_go.svg",
     name: "Yandex Go",
   },
 ];

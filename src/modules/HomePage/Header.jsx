@@ -24,7 +24,7 @@ const Header = () => {
                             { src: 'parcel', text: 'Минимальные риски' }
                         ].map((item, index) => (
                             <li key={index} className="flex flex-col items-center">
-                                <img className="" src={`https://storage.cloupard.uz/irbisuz/images/app_images/${item.src}.svg`} alt={item.src} width="110" />
+                                <img className="" src={`https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/app_images/${item.src}.svg`} alt={item.src} width="110" />
                                 <p className="text-white font-normal">{item.text}</p>
                             </li>
                         ))}

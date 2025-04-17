@@ -48,7 +48,7 @@ const Section6 = () => {
                 <div className="flex mt-[55px] items-start md:justify-evenly justify-center">
                     <img
                         className="hidden lg:block"
-                        src="https://storage.cloupard.uz/irbisuz/images/app_images/call_center.svg"
+                        src="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/images/app_images/call_center.svg"
                         alt={"call center"}
                         width={530}
                         height={600}
@@ -89,7 +89,7 @@ const Section6 = () => {
 
                         <label className="flex flex-col">
                             <span className="text-black font-light text-[12px]">
-                                Наш какой продукт/услуга вас интересует
+                                Наш какой продукт/услуга вас интересует?
                             </span>
                             <input
                                 value={message}
