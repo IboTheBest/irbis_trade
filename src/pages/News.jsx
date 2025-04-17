@@ -15,23 +15,18 @@ export default function News() {
   return (
     <>
       <Helmet>
-        <meta
-          name="description"
-          content="Эксперты в области таможенной очистки грузов с 2014 года"
-        />
-        <meta property="og:title" content='ЧП "IRBIS US"' />
-        <meta
-          property="og:description"
-          content="Эксперты в области таможенной очистки грузов с 2014 года"
-        />
-        <meta
-          property="og:image"
-          content="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/websiteassets/irbis_logo.svg"
-        />
+        <title>Новости IRBIS U.S. — Таможенное оформление и ВЭД в Узбекистане</title>
+        <meta name="description" content="Читайте последние новости компании IRBIS U.S. о таможенном оформлении, логистике и внешнеэкономической деятельности в Узбекистане." />
+        <meta name="keywords" content="новости IRBIS, ВЭД, таможенное оформление, логистика, экспорт, импорт, Узбекистан, IRBIS U.S." />
+        <meta property="og:title" content="Новости IRBIS U.S. — ВЭД и Таможня" />
+        <meta property="og:description" content="Актуальные новости в сфере внешнеэкономической деятельности и таможенного оформления от IRBIS U.S." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://irbis-trade.uz/" />
-
-        <meta name="robots" content="index, follow" />
+        <meta property="og:url" content="https://irbis-trade.uz/news" />
+        <meta property="og:image" content="https://storage.cloupard.uz/irbisuz/irbis_logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Новости IRBIS U.S." />
+        <meta name="twitter:description" content="Последние новости и аналитика в сфере внешнеэкономической деятельности и логистики от IRBIS U.S." />
+        <meta name="twitter:image" content="https://storage.cloupard.uz/irbisuz/irbis_logo.png" />
       </Helmet>
       <div className="w-full bg-gradient-to-b from-gray-50 to-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

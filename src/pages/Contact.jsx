@@ -41,23 +41,18 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <meta
-          name="description"
-          content="Эксперты в области таможенной очистки грузов с 2014 года"
-        />
-        <meta property="og:title" content='ЧП "IRBIS US"' />
-        <meta
-          property="og:description"
-          content="Эксперты в области таможенной очистки грузов с 2014 года"
-        />
-        <meta
-          property="og:image"
-          content="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/websiteassets/irbis_logo.svg"
-        />
+        <title>Связаться с IRBIS U.S. — Таможенное оформление и ВЭД</title>
+        <meta name="description" content="Свяжитесь с IRBIS U.S. по вопросам таможенного оформления и внешнеэкономической деятельности. Наш адрес, телефоны, email и форма обратной связи." />
+        <meta name="keywords" content="контакты IRBIS, таможенное оформление, ВЭД, Аркбулак, Зангиата, телефон IRBIS, email IRBIS, IRBIS U.S. Узбекистан" />
+        <meta property="og:title" content="Свяжитесь с IRBIS U.S." />
+        <meta property="og:description" content="Контактная информация, адрес, телефоны и форма связи с IRBIS U.S. — вашим надёжным партнёром в области ВЭД." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://irbis-trade.uz/" />
-
-        <meta name="robots" content="index, follow" />
+        <meta property="og:url" content="https://irbis-trade.uz/contacts" />
+        <meta property="og:image" content="https://storage.cloupard.uz/irbisuz/irbis_logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Свяжитесь с IRBIS U.S." />
+        <meta name="twitter:description" content="Контакты и форма связи с IRBIS U.S. — консультации по ВЭД и таможенному оформлению." />
+        <meta name="twitter:image" content="https://storage.cloupard.uz/irbisuz/irbis_logo.png" />
       </Helmet>
       <div className="max-w-6xl mx-auto p-4 md:p-8" data-aos="fade-up">
         <LoadingModal setVisible={setModalVisible} visible={modalVisible} message="Данные успешно отправлены!" onClose={handleCloseModal} />

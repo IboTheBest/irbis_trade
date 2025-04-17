@@ -9,25 +9,25 @@ const Products = () => {
   return (
     <>
       <Helmet>
-        <meta
-          name="description"
-          content="Эксперты в области таможенной очистки грузов с 2014 года"
-        />
-        <meta property="og:title" content='ЧП "IRBIS US"' />
-        <meta
-          property="og:description"
-          content="Эксперты в области таможенной очистки грузов с 2014 года"
-        />
-        <meta
-          property="og:image"
-          content="https://pub-5d689109f9c54618b392443e150975a9.r2.dev/websiteassets/irbis_logo.svg"
-        />
+        <title>Продукты | IRBIS U.S. — Таможенное оформление и ВЭД в Узбекистане</title>
+        <meta name="description" content="Продукты компании IRBIS U.S." />
+        <meta name="keywords" content="продукты IRBIS, ВЭД, таможенное оформление, логистика, экспорт, импорт, Узбекистан, IRBIS U.S." />
+        <meta property="og:title" content="Продукты IRBIS U.S. — ВЭД и Таможня" />
+        <meta property="og:description" content="Продукты компании IRBIS U.S." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://irbis-trade.uz/" />
-
-        <meta name="robots" content="index, follow" />
+        <meta property="og:url" content="https://irbis-trade.uz/our-products" />
+        <meta property="og:image" content="https://storage.cloupard.uz/irbisuz/irbis_logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Продукты IRBIS U.S." />
+        <meta name="twitter:description" content="Продукты компании IRBIS U.S." />
+        <meta name="twitter:image" content="https://storage.cloupard.uz/irbisuz/irbis_logo.png" />
       </Helmet>
-      <section className='containers !py-[100px] flex flex-wrap items-center gap-[20px]'>{data?.map(item => <ReusebleCard extraClass={"!p-[0]"} key={item.id} imgClass={"!rounded-t-[20px]"} item={item} isBtn={false} />)}</section>
+      <section className='containers !pt-[30px] !pb-[100px] flex flex-wrap items-center gap-[20px]'>
+        <h2 className='w-full text-center font-black text-black text-[28px] mb-8'>Наши продукты</h2>
+        {data?.map(item => (
+          <ReusebleCard key={item.id} extraClass="!p-[0]" imgClass="!rounded-t-[20px]" item={item} isBtn={false} />
+        ))}
+      </section>
     </>
   )
 }
