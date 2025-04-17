@@ -52,7 +52,7 @@ const Contact = () => {
         />
         <meta
           property="og:image"
-          content="https://contents.irbis-trade.uz/websiteassets/irbis_logo.svg"
+          content="https://storage.cloupard.uz/irbisuz/websiteassets/irbis_logo.svg"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://irbis-trade.uz/" />
@@ -96,7 +96,7 @@ const Contact = () => {
                 <MailOutlined className="text-gray-500 text-lg mt-1 mr-3" />
                 <div>
                   <p className="font-medium">Электронная почта:</p>
-                  <p className="text-gray-500">info@example.com</p>
+                  <a href="mailto:info@irbis-trade.uz" target="_blank">info@irbis-trade.uz</a>
                 </div>
               </div>
 

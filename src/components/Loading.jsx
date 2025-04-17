@@ -4,7 +4,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 export const Loading = () => {
   return (
     <DotLottieReact
-      src="https://lottie.host/91a7de89-7ac8-46b1-b6c3-3f26655eef2a/KZdOVA5LZV.lottie"
+      src="https://storage.cloupard.uz/irbisuz/assets/success_anim.lottie"
       loop
       autoplay
     />

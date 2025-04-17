@@ -77,7 +77,7 @@ const Take = () => {
                     </label>
 
                     <label className="flex flex-col">
-                        <span className="text-white font-extralight text-[12px]">Наш какой продукт/услуга вас интересует</span>
+                        <span className="text-white font-extralight text-[12px]">Наш какой продукт/услуга вас интересует?</span>
                         <input
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}

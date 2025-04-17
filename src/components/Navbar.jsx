@@ -46,7 +46,7 @@ const Navbar = () => {
       <Link className="ml-[30px]" to={"/"}>
         <img
           className="untouchable"
-          src="https://contents.irbis-trade.uz/websiteassets/irbis_logo.svg"
+          src="https://storage.cloupard.uz/irbisuz/websiteassets/irbis_logo.svg"
           alt="site logo"
           width="144"
           height="112"
@@ -67,7 +67,7 @@ const Navbar = () => {
       <button onClick={() => setOpen(!open)} className="mr-[30px] md:hidden">
         <img
           className="untouchable"
-          src="https://contents.irbis-trade.uz/images/app_images/menu.svg"
+          src="https://storage.cloupard.uz/irbisuz/images/app_images/menu.svg"
           alt="open navbar menu"
           width="40"
           height="40"

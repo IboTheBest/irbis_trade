@@ -8,27 +8,27 @@ const Section5 = () => {
     const section5data = [
         {
             id: 1,
-            img_url: "https://contents.irbis-trade.uz/images/app_images/costumerSupport.svg",
+            img_url: "https://storage.cloupard.uz/irbisuz/images/app_images/costumerSupport.svg",
             title: "Полный спектр услуг УЭО"
         },
         {
             id: 2,
-            img_url: "https://contents.irbis-trade.uz/images/app_images/schedule.svg",
+            img_url: "https://storage.cloupard.uz/irbisuz/images/app_images/schedule.svg",
             title: "Таможенное оформление"
         },
         {
             id: 3,
-            img_url: "https://contents.irbis-trade.uz/images/app_images/toDo.svg",
+            img_url: "https://storage.cloupard.uz/irbisuz/images/app_images/toDo.svg",
             title: "Комплексная логистика"
         },
         {
             id: 4,
-            img_url: "https://contents.irbis-trade.uz/images/app_images/fastDelivery.svg",
+            img_url: "https://storage.cloupard.uz/irbisuz/images/app_images/fastDelivery.svg",
             title: "Автоперевозки"
         },
         {
             id: 5,
-            img_url: "https://contents.irbis-trade.uz/images/app_images/train.svg",
+            img_url: "https://storage.cloupard.uz/irbisuz/images/app_images/train.svg",
             title: "ЖД-перевозки"
         },
     ]

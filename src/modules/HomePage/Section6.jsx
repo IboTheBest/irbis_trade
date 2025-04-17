@@ -48,7 +48,7 @@ const Section6 = () => {
                 <div className="flex mt-[55px] items-start md:justify-evenly justify-center">
                     <img
                         className="hidden lg:block"
-                        src="https://contents.irbis-trade.uz/images/app_images/call_center.svg"
+                        src="https://storage.cloupard.uz/irbisuz/images/app_images/call_center.svg"
                         alt={"call center"}
                         width={530}
                         height={600}
